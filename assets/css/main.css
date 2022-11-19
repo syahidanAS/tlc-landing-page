@@ -7,7 +7,7 @@ html {
   }
   
 body{
-    background-image: url('../hero-accent.svg');
+    background-image: url('../images/hero-accent.svg');
     background-repeat: no-repeat;
 	background-size: 800px;
 	background-position: 90% -25%;

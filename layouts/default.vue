@@ -19,7 +19,7 @@
         </div>
         <ul class="hidden font-semibold text-white md:flex md:gap-6">
           <li>
-            <NuxtLink
+            <a
               class="
                 transform
                 block
@@ -28,12 +28,12 @@
                 duration:500
                 hover:scale-125 hover:text-blue-300
               "
-              to="/"
-              >Home</NuxtLink
+              href="#about"
+              >Tentang Kami</a
             >
           </li>
           <li>
-            <NuxtLink
+            <a
               class="
                 transform
                 block
@@ -42,9 +42,8 @@
                 duration:500
                 hover:scale-125 hover:text-blue-300
               "
-              to="/products"
-              >Program</NuxtLink
-            >
+              href="#programs"
+              >Programs</a>
           </li>
           <li>
             <NuxtLink
@@ -70,29 +69,16 @@
                 duration:500
                 hover:scale-125 hover:text-blue-300
               "
-              to="/about"
+              to="#about"
               >Blog</NuxtLink
             >
           </li>
-          <li>
-            <NuxtLink
-              class="
-                transform
-                block
-                mt-2
-                transition
-                duration:500
-                hover:scale-125 hover:text-blue-300
-              "
-              to="/about"
-              >About</NuxtLink
-            >
-          </li>
         </ul>
-        <div class="flex md:hidden" v-on:click="isHidden = !isHidden">
-          <a href="#">
-            <img src="~/assets/menu.png" class="w-6" alt="menu" />
-          </a>
+        <div class="flex md:hidden cursor-pointer" v-on:click="isHidden = !isHidden" v-if="isHidden" >    
+            <img src="~/assets/images/menu.png" class="w-6" alt="menu" />
+        </div>
+        <div class="flex md:hidden cursor-pointer" v-on:click="isHidden = !isHidden" v-else >    
+            <img src="~/assets/images/close.png" class="w-5" alt="menu" />
         </div>
       </div>
       <!-- Mobile Menu -->
@@ -118,29 +104,44 @@
         >
           <ul>
             <li class="mb-6 mt-5">
-              <NuxtLink class="hover:text-orange-500" to="/">Home</NuxtLink>
+              <NuxtLink class="hover:text-blue-300" to="/">Home</NuxtLink>
             </li>
             <li class="my-6">
-              <NuxtLink class="hover:text-orange-500" to="/products"
-                >Products</NuxtLink
+              <a class="hover:text-blue-300" href="#programs"
+                >Programs</a>
+            </li>
+            <li class="my-6">
+              <NuxtLink class="hover:text-blue-300" to="/gallery"
+                >Gallery</NuxtLink
               >
             </li>
             <li class="my-6">
-              <NuxtLink class="hover:text-orange-500" to="/pricing"
-                >Pricing</NuxtLink
+              <NuxtLink class="hover:text-blue-300" to="/blog"
+                >Blog</NuxtLink
               >
             </li>
             <li class="my-6">
-              <NuxtLink class="hover:text-orange-500" to="/about"
+              <NuxtLink class="hover:text-blue-300" to="/about"
                 >About</NuxtLink
               >
+            </li>
+            <li class="my-6">
+              <div class="flex flex-row gap-4"  @click="isExpand = !isExpand">
+                <p class="cursor-pointer hover:text-blue-300">Shortcut</p>
+                <img class="cursor-pointer w-4 content-end" src="~/assets/images/down.png" alt="" v-if="!isExpand">
+                <img class="cursor-pointer w-4 content-end" src="~/assets/images/up.png" alt="" v-if="isExpand">
+              </div>
+              <ul class="px-4 flex flex-col gap-2 mt-2 font-thin border-l-2 border-indigo-500"  v-if="isExpand">
+                <li><a href="https://student.thebrightcourse.com">Student Page</a></li>
+                <li><a href="https://teacher.thebrightcourse.com">Teacher Page </a></li>
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <Nuxt class="blur-md" v-if="!isHidden" />
-    <Nuxt class="" v-else />
+    <Nuxt class="blur-md" @click="isHidden = !isHidden" v-if="!isHidden"  />
+    <Nuxt class="" @click="isHidden = !isHidden" v-else />
   </div>
 </template>
 
@@ -150,6 +151,7 @@ export default {
   data() {
     return {
       isHidden: true,
+      isExpand: false,
     };
   },
   methods: {},
