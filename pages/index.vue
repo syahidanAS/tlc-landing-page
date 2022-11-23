@@ -4,6 +4,7 @@
     <OportunitySection />
     <AboutSection />
     <ProgramsSection />
+    <TestimonialsSection />
   </div>
 </template>
 

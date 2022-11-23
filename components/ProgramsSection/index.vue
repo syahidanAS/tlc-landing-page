@@ -1,7 +1,7 @@
 <template>
   <section
     id="programs"
-    class="bg-blue-500 px-20 mb-16 md:px-12 md:py-32 md:bg-white py-4">
+    class="bg-blue-500 px-20 md:px-12 md:py-20 md:bg-white py-4">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-white text-2xl font-bold text-center md:text-slate-600">
         Program
