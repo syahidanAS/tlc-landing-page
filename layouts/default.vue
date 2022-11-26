@@ -43,10 +43,10 @@
                 hover:scale-125 hover:text-blue-300
               "
               href="#programs"
-              >Programs</a>
+              >Program</a>
           </li>
           <li>
-            <NuxtLink
+            <a
               class="
                 transform
                 block
@@ -55,8 +55,8 @@
                 duration:500
                 hover:scale-125 hover:text-blue-300
               "
-              to="/pricing"
-              >Gallery</NuxtLink
+              href="#testimonials"
+              >Testimoni</a
             >
           </li>
           <li>
