@@ -6,7 +6,6 @@
     <ProgramsSection />
     <TestimonialsSection />
     <AdvertisementSection />
-    <TestiSec />
     <PartnersSection />
   </div>
 </template>

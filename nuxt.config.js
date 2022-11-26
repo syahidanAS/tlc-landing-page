@@ -27,6 +27,7 @@ export default {
   plugins: [
     '~/plugins/v-tooltip.js',
     '~/plugins/EasySlider.js',
+    '~/plugins/vue-awesome-swiper',
     {src: "~/plugins/aos", ssr: false}
   ],
 
