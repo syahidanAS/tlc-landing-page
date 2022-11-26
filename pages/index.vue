@@ -5,6 +5,7 @@
     <AboutSection />
     <ProgramsSection />
     <TestimonialsSection />
+    <AdvertisementSection />
   </div>
 </template>
 

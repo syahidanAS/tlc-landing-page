@@ -17,7 +17,7 @@
       <div
         class="flex flex-col md:flex-row md:bg-blue-500 rounded-lg md:gap-4 px-6 mt-6 md:mt-36 py-4 md:py-0">
         <div
-          class="flex flex-col bg-white p-5 mb-4 max-w-lg md:max-w-md text-start rounded-md shadow-sm shadow-slate-600 md:-mt-28 md:mb-20 md:transform md:transition md:duration-500 md:hover:scale-125 md:hover:z-10 opacity-95">
+          class="flex flex-col bg-white p-5 max-w-md text-start rounded-md shadow-sm md:-mt-28 mb-4 shadow-slate-600 md:mb-20 md:transform md:transition md:duration-500 md:hover:scale-125 md:hover:z-10 opacity-95">
           <img src="~/assets/images/program-purple.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
