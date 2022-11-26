@@ -39,7 +39,7 @@ export default {
 }
 @media only screen and (max-width: 768px){
   .carousel-indicators{
-    bottom: 50%;
+    bottom: 55%;
   }
   .carousel-indicator-item{
     width: 10px;

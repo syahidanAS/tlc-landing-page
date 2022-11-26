@@ -6,7 +6,7 @@
       <div class="flex flex-col space-y-8 md:w-1/2">
         <h1
           class="max-w-small text-4xl font-bold leading-snug text-center mt-4 md:text-5xl md:text-left text-slate-800 md:leading-snug">
-          Ciptakan Masa Depan yang Lebih Baik<span class="text-blue-300">
+          Ciptakan Masa Depan yang Lebih Baik<span class="text-white">
             Bersama Kami</span>
         </h1>
         <p

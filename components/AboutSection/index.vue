@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="mt-0 py-28 px-20 md:px-12 md:py-10 md:mt-20">
+  <section id="about" class="mt-0 py-28 px-20 md:px-12 md:py-10 md:mt-20 bg-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-center text-slate-600">
         Tentang Kami

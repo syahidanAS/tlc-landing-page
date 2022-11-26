@@ -11,6 +11,17 @@ body{
     background-repeat: no-repeat;
 	background-size: 800px;
 	background-position: 100% -4%;
+	background-color: #93c5fd;
+}
+
+img{
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	pointer-events: none;
 }
 
 @media(max-width: 576px){

@@ -1,5 +1,8 @@
 <template>
-  <carousel class="my-32" :slides="slides" :interval="3000" controls indicators></carousel>
+  <section class="bg-white">
+    <carousel class="mx-6 md:mb-10 md:mx-0 " :slides="slides" :interval="3000" controls indicators></carousel>
+
+  </section>
 </template>
   
   <script>
@@ -12,8 +15,9 @@ export default {
   data() {
     return {
       slides:[
-        'https://picsum.photos/id/1040/900/400',
-        'https://picsum.photos/id/1037/900/400',
+        require(`~/assets/images/banner1.jpg`),
+        require(`~/assets/images/banner2.jpg`),
+        require(`~/assets/images/banner3.jpg`),
       ],
     };
   },
