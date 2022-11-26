@@ -1,10 +1,10 @@
 <template>
     <div>
         <button class="carousel-control left ml-4 px-auto" @click="$emit('prev')">
-            <img class="mx-auto w-5" src="~/assets/images/left-arrow.png" alt="">
+            <img class="mx-auto w-5" src="~/assets/images/arrow-left-slate-24.png" alt="">
         </button>
         <button class="carousel-control right mr-4 px-auto" @click="$emit('next')">
-            <img class="mx-auto w-5" src="~/assets/images/right-arrow.png" alt="">
+            <img class="mx-auto w-5" src="~/assets/images/arrow-right-slate-24.png" alt="">
         </button>
     </div>
 </template>

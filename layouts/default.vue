@@ -99,14 +99,14 @@
           v-on:click="isHidden = !isHidden"
           v-if="isHidden"
         >
-          <img src="~/assets/images/menu.png" class="w-6" alt="menu" />
+          <img :src="require('~/assets/images/'+menuTheme)" class="w-6" alt="menu" />
         </div>
         <div
           class="flex md:hidden cursor-pointer"
           v-on:click="isHidden = !isHidden"
           v-else
         >
-          <img src="~/assets/images/close.png" class="w-5" alt="menu" />
+          <img :src="require('~/assets/images/'+closeTheme)" class="w-5" alt="menu" />
         </div>
       </div>
       <!-- Mobile Menu -->
@@ -131,29 +131,29 @@
         >
           <ul>
             <li class="mb-6 mt-5">
-              <a :class="textColor" href="#about">Tentang Kami</a>
+              <a :class="textColor" href="#about" v-on:click="isHidden = !isHidden">Tentang Kami</a>
             </li>
             <li class="my-6">
-              <a :class="textColor" href="#programs">Program</a>
+              <a :class="textColor" href="#programs" v-on:click="isHidden = !isHidden">Program</a>
             </li>
             <li class="my-6">
-              <a :class="textColor" href="#testimonials">Testimoni</a>
+              <a :class="textColor" href="#testimonials" v-on:click="isHidden = !isHidden">Testimoni</a>
             </li>
             <li class="my-6">
-              <NuxtLink :class="textColor" to="/blogs">Blog</NuxtLink>
+              <NuxtLink :class="textColor" to="/blogs" v-on:click="isHidden = !isHidden">Blog</NuxtLink>
             </li>
             <li class="my-6">
               <div class="flex flex-row gap-4" @click="isExpand = !isExpand">
                 <p class="cursor-pointer" :class="textColor">Pintasan</p>
                 <img
                   class="cursor-pointer w-4 h-4 content-end my-auto"
-                  src="~/assets/images/down.png"
+                  :src="require('~/assets/images/' + upDirection) "
                   alt=""
                   v-if="!isExpand"
                 />
                 <img
                   class="cursor-pointer w-4 h-4 content-end my-auto"
-                  src="~/assets/images/up.png"
+                  :src="require('~/assets/images/' + downDirection )"
                   alt=""
                   v-if="isExpand"
                 />
@@ -189,10 +189,11 @@
         </div>
       </div>
     </nav>
+    
     <Nuxt class="blur-md" @click="isHidden = !isHidden" v-if="!isHidden" />
     <Nuxt class="" @click="isHidden = !isHidden" v-else />
     <a
-      onclick="buttonHandler()"
+      id="fab"
       title="Contact Sale"
       class="
         fixed
@@ -231,18 +232,29 @@ export default {
       isExpand: false,
       navColor: "bg-white",
       textColor: "text-slate-700 hover:text-slate-800",
+      menuTheme: "menu-slate-64.png",
+      closeTheme: "close-slate-64.png",
+      upDirection: "arrow-up-slate-24.png",
+      downDirection: "arrow-down-slate-24.png"
     };
   },
   methods: {
     handleScroll() {
       // Your scroll handling here
-      console.log(window.scrollY);
       if (window.scrollY > 1000) {
         this.navColor = "bg-slate-700";
         this.textColor = "text-white hover:text-slate-200";
+        this.menuTheme = "menu-white-64.png"
+        this.closeTheme = "close-white-64.png"
+        this.upDirection = "arrow-up-white-24.png"
+        this.downDirection = "arrow-down-white-24.png"
       } else {
         this.navColor = "bg-white";
         this.textColor = "text-slate-700 hover:text-slate-800";
+        this.menuTheme = "menu-slate-64.png"
+        this.closeTheme = "close-slate-64.png"
+        this.upDirection = "arrow-up-slate-24.png"
+        this.downDirection = "arrow-down-slate-24.png"
       }
     },
   },
