@@ -44,7 +44,7 @@ export default {
     },
     interval:{
       type: Number,
-      default: 3000
+      default: 1000
     }
   },
   components: { CarouselItem, CarouselControls, CarouselIndicators },

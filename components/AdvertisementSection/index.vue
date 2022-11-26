@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white">
+  <section class="bg-white pb-0 md:pb-20">
     <carousel class="mx-6 md:mb-10 md:mx-0 " :slides="slides" :interval="3000" controls indicators></carousel>
 
   </section>

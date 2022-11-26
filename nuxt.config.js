@@ -13,18 +13,21 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'logo-blue.png' },
+      {rel: "stylesheet", href: "https://cdn.jsdelivr.net/@ajusa/lit@1.0.0/dist/lit.css"}
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
+    'aos/dist/aos.css'
   ],
-
+  vendor: ["aos"],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/v-tooltip.js',
     '~/plugins/EasySlider.js',
+    {src: "~/plugins/aos", ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -55,5 +58,5 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
 }

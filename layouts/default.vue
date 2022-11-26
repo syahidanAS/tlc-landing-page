@@ -1,6 +1,6 @@
 <template>
   <div class="relative z-10">
-    <nav class="p-2 sticky top-0 z-50" :class="navColor">
+    <nav class="p-2 py-2 sticky top-0 z-50 md:py-5" :class="navColor">
       <div
         class="
           flex
@@ -17,7 +17,7 @@
             <h2 class="px-2 text-center pt-1">The Bright</h2>
           </a>
         </div>
-        <ul class="hidden font-semibold text-white md:flex md:gap-6">
+        <ul class="hidden font-bold text-md text-white md:flex md:gap-6">
           <li>
             <a
               class="
@@ -27,6 +27,9 @@
                 transition
                 duration:500
                 hover:scale-125
+                hover:bg-slate-400
+                hover:px-1
+                hover:rounded-md
               "
               :class="textColor"
               href="#about"
@@ -42,6 +45,9 @@
                 transition
                 duration:500
                 hover:scale-125
+                hover:bg-slate-400
+                hover:px-1
+                hover:rounded-md
               "
               :class="textColor"
               href="#programs"
@@ -57,6 +63,9 @@
                 transition
                 duration:500
                 hover:scale-125
+                hover:bg-slate-400
+                hover:px-1
+                hover:rounded-md
               "
               :class="textColor"
               href="#testimonials"
@@ -72,6 +81,9 @@
                 transition
                 duration:500
                 hover:scale-125
+                hover:bg-slate-400
+                hover:px-1
+                hover:rounded-md
               "
               :class="textColor"
               to="#about"
@@ -87,6 +99,9 @@
                 transition
                 duration:500
                 hover:scale-125
+                hover:bg-slate-400
+                hover:px-1
+                hover:rounded-md
               "
               :class="textColor"
               to="#about"
@@ -200,7 +215,7 @@
         z-90
         bottom-10
         right-8
-        bg-sky-500
+        bg-pink-500
         w-10
         h-10
         md:w-12
@@ -210,11 +225,12 @@
         flex
         justify-center
         items-center
-        
-        hover:bg-blue-700 hover:drop-shadow-2xl 
+        hover:bg-pink-700
+        hover:drop-shadow-2xl 
         animate-bounce
         duration-300
       "
+      v-show="show"
       href="#"
     >
       <img src="~/assets/images/arrow-up-white-24.png" alt="">
@@ -231,11 +247,13 @@ export default {
       isHidden: true,
       isExpand: false,
       navColor: "bg-white",
+      navOpacity: 'opacity-1',
       textColor: "text-slate-700 hover:text-slate-800",
       menuTheme: "menu-slate-64.png",
       closeTheme: "close-slate-64.png",
       upDirection: "arrow-up-slate-24.png",
-      downDirection: "arrow-down-slate-24.png"
+      downDirection: "arrow-down-slate-24.png",
+      show: false,
     };
   },
   methods: {
@@ -248,6 +266,8 @@ export default {
         this.closeTheme = "close-white-64.png"
         this.upDirection = "arrow-up-white-24.png"
         this.downDirection = "arrow-down-white-24.png"
+        this.navOpacity = "opacity-1"
+        this.show = true
       } else {
         this.navColor = "bg-white";
         this.textColor = "text-slate-700 hover:text-slate-800";
@@ -255,6 +275,8 @@ export default {
         this.closeTheme = "close-slate-64.png"
         this.upDirection = "arrow-up-slate-24.png"
         this.downDirection = "arrow-down-slate-24.png"
+        this.navOpacity = "opacity-0.95"
+        this.show = false
       }
     },
   },

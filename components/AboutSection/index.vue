@@ -71,7 +71,7 @@
     <!-- About Container -->
     <div
       class="flex flex-col gap-7 mx-auto mt-10 md:flex-row md:space-x-6 md:px-20 items-center">
-      <div>
+      <div data-aos="fade-up">
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Teach</span>
         </h2>
@@ -80,7 +80,7 @@
           mengajarkan bahasa asing secara terintegrasi sesuai kebutuhan customer
         </p>
       </div>
-      <div>
+      <div data-aos="fade-up">
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Share</span>
         </h2>
@@ -90,7 +90,7 @@
           kerelawanan, dan pengabdian masyarakat
         </p>
       </div>
-      <div>
+      <div data-aos="fade-up">
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Care</span>
         </h2>

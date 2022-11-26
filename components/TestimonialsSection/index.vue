@@ -8,7 +8,7 @@
       <h1 class="py-4 text-3xl md:text-4xl font-semibold text-blue-600">
         Apa Kata<span class="text-slate-500"> Mereka?</span>
       </h1>
-      <div class="flex flex-col md:flex-row gap-4 mt-6">
+      <div class="flex flex-col md:flex-row gap-4 mt-6" data-aos="fade-down">
         <div class="flex flex-col max-w-sm p-4 gap-2 rounded-md items-center shadow-sm shadow-slate-400 mx-auto"> 
         <img class="rounded-full w-24" src="~/assets/images/boy.jpg" alt="testimonial">
         <h2 class="text-2xl text-slate-800 font-bold">Joni De</h2>
