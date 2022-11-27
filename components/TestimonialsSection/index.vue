@@ -1,7 +1,7 @@
 <template>
   <section
     id="testimonials"
-    class="px-20 pt-2 bg-white pb-0 md:pb-20 md:px-32 md:pt-0"
+    class="px-20 pt-8 bg-white pb-0 md:pb-20 md:px-32 md:pt-20"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Testimoni
@@ -52,7 +52,7 @@
           "
         >
           <img
-            class="rounded-full w-24"
+            class="rounded-full w-24 h-24"
             src="~/assets/images/boy.jpg"
             alt="testimonial"
           />
@@ -79,8 +79,8 @@
           "
         >
           <img
-            class="rounded-full w-24"
-            src="~/assets/images/boy.jpg"
+            class="rounded-full w-24 h-24"
+            src="~/assets/images/program-purple.png"
             alt="testimonial"
           />
           <h2 class="text-2xl text-slate-800 font-bold">Joni De</h2>
@@ -106,7 +106,7 @@
           "
         >
           <img
-            class="rounded-full w-24"
+            class="rounded-full w-24 h-24"
             src="~/assets/images/boy.jpg"
             alt="testimonial"
           />

@@ -6,6 +6,7 @@
     <ProgramsSection />
     <TestimonialsSection />
     <AdvertisementSection />
+    <ArticleSection />
     <PartnersSection />
     <FaqSection />
   </div>

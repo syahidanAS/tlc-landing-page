@@ -1,10 +1,10 @@
 <template>
   <section
     id="programs"
-    class="bg-blue-500 px-20 md:px-12 md:py-20 md:bg-white py-4"
+    class="bg-blue-500 px-20 md:px-12 md:py-3 md:bg-white py-4"
   >
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-white text-2xl font-bold text-center md:text-slate-600">
+    <div class="max-w-6xl mx-auto text-center py-12 px-5 md:py-0 md:px-0">
+      <h2 class="text-white text-2xl font-bold text-center md:text-slate-700">
         Program
       </h2>
       <!-- Heading -->
@@ -21,7 +21,7 @@
         "
       >
         Pilih
-        <span class="text-slate-400 md:text-slate-500 md:text-pink-400">Program</span> yang Anda
+        <span class="text-pink-400 md:text-pink-400">Program</span> yang Anda
         Inginkan
       </h1>
 
