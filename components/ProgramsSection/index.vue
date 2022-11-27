@@ -1,9 +1,9 @@
 <template>
   <section
     id="programs"
-    class="bg-blue-500 px-20 md:px-12 md:py-3 md:bg-white py-4"
+    class="bg-blue-500 px-11 md:px-12 md:py-3 md:bg-white py-4"
   >
-    <div class="max-w-6xl mx-auto text-center py-12 px-5 md:py-0 md:px-0">
+    <div class="max-w-6xl mx-auto text-center py-12 px-4 md:py-0 md:px-0">
       <h2 class="text-white text-2xl font-bold text-center md:text-slate-700">
         Program
       </h2>
@@ -38,7 +38,7 @@
           md:py-0
           md:px-6
         "
-        data-aos="flip-up"
+        data-aos="fade-down"
       >
         <div
           class="

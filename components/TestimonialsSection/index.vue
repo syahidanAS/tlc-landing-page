@@ -1,7 +1,7 @@
 <template>
   <section
     id="testimonials"
-    class="px-20 pt-8 bg-white pb-0 md:pb-20 md:px-32 md:pt-20"
+    class="px-14 pt-8 bg-white pb-0 md:pb-20 md:px-32 md:pt-20"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Testimoni
@@ -83,7 +83,7 @@
             src="~/assets/images/program-purple.png"
             alt="testimonial"
           />
-          <h2 class="text-2xl text-slate-800 font-bold">Joni De</h2>
+          <h2 class="text-2xl text-slate-800 font-bold">Jane Di</h2>
           <p class="text-sm text-slate-600 font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
             facere.

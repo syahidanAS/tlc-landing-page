@@ -8,10 +8,10 @@
     </h2>
     <div class="flex flex-col md:flex-row px-0 pb-24 gap-4 mt-4 md:px-24 md:pb-0">
       <!-- Article 1 -->
-      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md">
+      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden">
         <a href="#">
           <img
-            class="w-72 h-44 hover:opacity-95"
+            class="w-full h-44 hover:opacity-95"
             src="https://akcdn.detik.net.id/visual/2019/03/20/cc11ed7b-5c4a-43ad-8ed0-2492d0c36053_169.jpeg?w=650"
             alt=""
           />
@@ -41,10 +41,10 @@
         </div>
       </div>
       <!-- Article 2 -->
-      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md">
+      <div class="max-w-sm bg-white border-gray-200 rounded-lg overflow-hidden shadow-md">
         <a href="#">
           <img
-            class="w-72 h-44"
+            class="w-full h-44"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMsojLT0CVfFtNvFHcVNMxsFCRhbFXn1fzPg&usqp=CAU"
             alt=""
           />
@@ -74,10 +74,10 @@
         </div>
       </div>
       <!-- Article 3 -->
-      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md">
+      <div class="max-w-sm bg-white border-gray-200 rounded-lg overflow-hidden shadow-md">
         <a href="#">
           <img
-            class="w-72 h-44"
+            class="w-full h-44"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnGXlmZS8UqGRao98zblE9_FmD5ZLE4sL9Xw&usqp=CAU"
             alt=""
           />
