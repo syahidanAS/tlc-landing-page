@@ -145,7 +145,7 @@
         <div class="flex flex-col cursor-pointer">
           <div class="flex flex-row justify-end px-3">
             <NuxtLink
-              to="/"
+              to="/faqs"
               class="text-md font-semibold text-blue-500 hover:text-blue-700"
             >
               Selengkapnya
