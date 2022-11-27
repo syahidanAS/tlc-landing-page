@@ -118,8 +118,11 @@ export default {
   .carousel-inner {
   position: relative;
   width: 700px;
-  height: 380px;
+  height: 200px;
   overflow: auto;
+}
+.carousel{
+  padding-top: 30px;
 }
 
 }

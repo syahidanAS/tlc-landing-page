@@ -13,7 +13,7 @@
           mt-2
           py-0
           md:py-4
-          text-2xl
+          text-lg
           md:text-4xl
           font-semibold
           text-white
@@ -21,7 +21,7 @@
         "
       >
         Pilih
-        <span class="text-pink-400 md:text-slate-500">Program</span> yang Anda
+        <span class="text-slate-400 md:text-slate-500 md:text-pink-400">Program</span> yang Anda
         Inginkan
       </h1>
 
@@ -98,7 +98,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-purple.png" alt="" />
+          <img src="~/assets/images/program-blue.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>
@@ -136,7 +136,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-purple.png" alt="" />
+          <img src="~/assets/images/program-orange.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>
@@ -174,7 +174,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-purple.png" alt="" />
+          <img src="~/assets/images/program-yellow.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>
@@ -212,7 +212,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-purple.png" alt="" />
+          <img src="~/assets/images/program-orange.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>

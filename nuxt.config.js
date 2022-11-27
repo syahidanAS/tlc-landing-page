@@ -25,7 +25,6 @@ export default {
   vendor: ["aos"],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/v-tooltip.js',
     '~/plugins/EasySlider.js',
     '~/plugins/vue-awesome-swiper',
     {src: "~/plugins/aos", ssr: false}

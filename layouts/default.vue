@@ -1,5 +1,25 @@
 <template>
-  <div class="relative z-10">
+  <div>
+    <div class="
+          flex    
+          px-4
+          py-1
+          bg-yellow-400
+          justify-end
+          items-center
+          md:px-28 
+          md:py-2">
+      <a class="mx-1 hover:bg-slate-600 hover:rounded-md" href="https://www.instagram.com/thebright.brightfuture/" target="_blank">
+        <img src="~/assets/images/instagram-white-16.png" alt="instagram-alt">
+      </a>
+      <a class="mx-1 hover:bg-slate-600 hover:rounded-md" href="#" target="_blank">
+        <img src="~/assets/images/whatsapp-white-16.png" alt="whatsapp-alt">
+      </a>
+      <a class="mx-1 hover:bg-slate-600 hover:rounded-md" href="https://www.youtube.com/@thebrightkarawangbimbeldan9883" target="_blank">
+        <img src="~/assets/images/youtube-white-16.png" alt="youtube-alt">
+      </a>
+    </div>
+    <div class="relative z-10">
     <nav class="p-2 py-2 sticky top-0 z-50 md:py-5" :class="navColor">
       <div
         class="
@@ -86,12 +106,12 @@
                 hover:rounded-md
               "
               :class="textColor"
-              to="#about"
-              >Blog</NuxtLink
+              to="/articles"
+              >Artikel</NuxtLink
             >
           </li>
           <li>
-            <NuxtLink
+            <a
               class="
                 transform
                 block
@@ -104,8 +124,8 @@
                 hover:rounded-md
               "
               :class="textColor"
-              to="#about"
-              >Pintasan</NuxtLink
+              href="#faq"
+              >Informasi</a
             >
           </li>
         </ul>
@@ -155,11 +175,11 @@
               <a :class="textColor" href="#testimonials" v-on:click="isHidden = !isHidden">Testimoni</a>
             </li>
             <li class="my-6">
-              <NuxtLink :class="textColor" to="/blogs" v-on:click="isHidden = !isHidden">Blog</NuxtLink>
+              <NuxtLink :class="textColor" to="/articles" v-on:click="isHidden = !isHidden">Artikel</NuxtLink>
             </li>
             <li class="my-6">
               <div class="flex flex-row gap-4" @click="isExpand = !isExpand">
-                <p class="cursor-pointer" :class="textColor">Pintasan</p>
+                <p class="cursor-pointer" :class="textColor">Informasi</p>
                 <img
                   class="cursor-pointer w-4 h-4 content-end my-auto"
                   :src="require('~/assets/images/' + upDirection) "
@@ -187,16 +207,14 @@
                 <li>
                   <a
                     :class="textColor"
-                    href="https://student.thebrightcourse.com"
-                    >Student Page</a
-                  >
+                    href="/articles"
+                    >Artikel</a>
                 </li>
                 <li>
                   <a
                     :class="textColor"
-                    href="https://teacher.thebrightcourse.com"
-                    >Teacher Page
-                  </a>
+                    href="/faqs"
+                    >FAQ</a>
                 </li>
               </ul>
             </li>
@@ -237,6 +255,8 @@
   </a>
 
   </div>
+  </div>
+  
 </template>
 
 <script>

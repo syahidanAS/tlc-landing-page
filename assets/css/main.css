@@ -6,14 +6,6 @@ html {
 	scroll-behavior: smooth;
   }
   
-body{
-    background-image: url('../images/hero-accent.svg');
-    background-repeat: no-repeat;
-	background-size: 800px;
-	background-position: 100% -4%;
-	background-color: #0ea5e9;
-}
-
 img{
 	user-drag: none; 
 	user-select: none;
@@ -24,10 +16,4 @@ img{
 	pointer-events: none;
 }
 
-@media(max-width: 576px){
-	body{
-		background-position: 50px -50px;
-		background-size: 500px;
-	}
-}
 

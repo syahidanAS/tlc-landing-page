@@ -1,19 +1,48 @@
 <template>
-    <section id="about" class="mt-0  px-20 md:px-12 md:py-10 md:mt-0 bg-white">
+  <section id="about" class="mt-0 px-10 md:px-12 md:py-10 md:mt-0 bg-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-center text-slate-600">
         Partner Kami
       </h2>
+      <div class="container flex flex-wrap mx-auto md:px-32 justify-center pt-6 gap-5">
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36"  >
+          <img src="~/assets/images/logo/bayukarta.png" alt="image"/>
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/rsik.jpg" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/rsud-karawang.jpg" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/peruri.png" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/pegadaian.png" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/persona-public-speaking.jpg" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/tk-bintang-pertiwi.png" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/karawang-peduli.png" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/sedekah-mainan.jpg" alt="image" />
+        </div>
+        <div class="w-20 p-2 rounded lg:w-36 md:w-36">
+          <img src="~/assets/images/logo/bale-ade.jpg" alt="image" />
+        </div>
+      </div>
     </div>
-    </section>
+  </section>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
 <style>
-
 </style>
