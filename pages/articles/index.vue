@@ -91,13 +91,14 @@
     </div>
 
     <div
-      class="flex flex-col container mx-auto py-6 md:grid md:grid-cols-4 gap-4"
+      class="flex flex-col container mx-auto py-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
     >
       <!-- Card Items -->
       <div
         class="
           col-span-1
-          flex flex-col
+          flex 
+          flex-col
           bg-white
           border-2
           overflow-hidden
