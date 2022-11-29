@@ -55,7 +55,7 @@
     </table>
 </div>
 <a class="py-2 px-3 border-2 border-sky-500 text-lg font-normal text-sky-500 rounded-md my-2 hover:bg-sky-500 hover:text-white" href="https://thebrightcourse.com/register">Daftar Langsung</a>
-<a class="py-2 px-3 border-2 border-green-500 text-lg font-normal text-green-500 rounded-md my-2 hover:bg-green-500 hover:text-white" href="https://wa.me/+6283815678057?text=Halo,%20saya%20ingin%20bertanya%20mengenai%20Program%20Bimbel">Tanya Kami</a>    
+<a class="py-2 px-3 border-2 border-green-500 text-lg font-normal text-green-500 rounded-md my-2 hover:bg-green-500 hover:text-white" :href="`https://wa.me/${waNumber}?text=Halo,%20saya%20ingin%20bertanya%20mengenai%20Program%20Bimbel`">Tanya Kami</a>    
 </div>
   </div>
 </template>
@@ -65,6 +65,7 @@ export default {
   name: "bimbingan-belajar",
   data(){
     return{
+      waNumber:process.env.WHATSAPP_NUMBER,
       priceList:[
         {
           level: "Bimbel Calistung",

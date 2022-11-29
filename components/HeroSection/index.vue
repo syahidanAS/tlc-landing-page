@@ -55,7 +55,7 @@
         </p>
         <div class="flex justify-center lg:justify-start">
           <a
-            href="https://thebrightcourse.com/register"
+            :href="registerLink"
             class="
               p-3
               text-white
@@ -78,6 +78,11 @@
 <script>
 export default {
   name: "HeroSection",
+  data(){
+    return{
+      registerLink: process.env.REGISTRATION_FORM
+    }
+  }
 };
 </script>
 

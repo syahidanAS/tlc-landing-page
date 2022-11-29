@@ -160,7 +160,7 @@
                   hover:bg-pink-600
                   text-white
                 "
-                href="https://thebrightcourse.com/register"
+                :href="registerLink"
                 >Pendaftaran</a
               >
             </li>
@@ -342,6 +342,7 @@ export default {
       upDirection: "arrow-up-slate-24.png",
       downDirection: "arrow-down-slate-24.png",
       show: false,
+      registerLink: process.env.REGISTRATION_FORM,
     };
   },
   methods: {
