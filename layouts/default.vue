@@ -129,7 +129,6 @@
                   bg-white
                   z-40
                   -mb-20
-                  px-2
                 
                   rounded-sm
                 "
@@ -145,6 +144,25 @@
 
               </div>
             </li>
+
+            <li>
+              <a
+                class="
+                  bg-pink-500
+                  p-2
+                  rounded-md
+                  transform
+                  block
+                  transition
+                  duration:500
+                  hover:bg-pink-600
+                  text-white
+                "
+                href="https://thebrightcourse.com/register"
+                >Pendaftaran</a
+              >
+            </li>
+
           </ul>
           <div
             class="flex md:hidden cursor-pointer"
@@ -257,6 +275,9 @@
                   </li>
                 </ul>
               </li>
+
+    
+
             </ul>
           </div>
         </div>

@@ -15,7 +15,7 @@
         </p>
         <div class="flex justify-center md:justify-start">
           <a
-            href="#"
+            href="https://thebrightcourse.com/register"
             class="p-3 px-6 pt-2 text-white bg-slate-700 rounded-md hover:bg-slate-800"
             >Daftar Sekarang!</a>
         </div>
