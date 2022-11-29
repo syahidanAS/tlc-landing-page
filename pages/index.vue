@@ -9,7 +9,6 @@
     <ArticleSection />
     <PartnersSection />
     <FaqSection />
-    <FooterSection />
 
   </div>
 </template>

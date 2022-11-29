@@ -46,14 +46,14 @@
           "
         >
           <div class="flex">
-            <a class="flex flex-row text-sky-400 font-bold text-2xl" href="/">
+            <NuxtLink class="flex flex-row text-sky-400 font-bold text-2xl" to="/">
               <img class="w-10" src="~/assets/images/logo-blue.png" alt="" />
               <h2 class="px-2 text-center pt-1">The Bright</h2>
-            </a>
+            </NuxtLink>
           </div>
           <ul class="hidden font-bold text-md text-white md:flex md:gap-10">
             <li>
-              <a
+              <NuxtLink
                 class="
                   transform
                   block
@@ -63,13 +63,13 @@
                   hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
                 "
                 :class="textColor"
-                href="#about"
-                >Tentang Kami</a
+                to="/#about"
+                >Tentang Kami</NuxtLink
               >
             </li>
            
             <li>
-              <a
+              <NuxtLink
                 class="
                   transform
                   block
@@ -79,12 +79,12 @@
                   hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
                 "
                 :class="textColor"
-                href="#programs"
-                >Program</a
+                to="/#programs"
+                >Program</NuxtLink
               >
             </li>
             <li>
-              <a
+              <NuxtLink
                 class="
                   transform
                   block
@@ -94,12 +94,12 @@
                   hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
                 "
                 :class="textColor"
-                href="#testimonials"
-                >Testimoni</a
+                to="/#testimonials"
+                >Testimoni</NuxtLink
               >
             </li>
             <li>
-              <a
+              <NuxtLink
                 class="
                   transform
                   block
@@ -109,8 +109,8 @@
                   hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
                 "
                 :class="textColor"
-                href="#about"
-                >Karir</a
+                to="/#about"
+                >Karir</NuxtLink
               >
             </li>
             <li>
@@ -139,7 +139,7 @@
                 <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/articles"
                   >Artikel</NuxtLink
                 >
-                <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/articles"
+                <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/faqs"
                   >FAQ</NuxtLink
                 >
                 <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/registration"
@@ -193,35 +193,35 @@
           >
             <ul>
               <li class="mb-6 mt-5">
-                <a
+                <NuxtLink
                   :class="textColor"
-                  href="#about"
+                  to="/#about"
                   v-on:click="isHidden = !isHidden"
-                  >Tentang Kami</a
+                  >Tentang Kami</NuxtLink
                 >
               </li>
               <li class="my-6">
-                <a
+                <NuxtLink
                   :class="textColor"
-                  href="#programs"
+                  to="/#programs"
                   v-on:click="isHidden = !isHidden"
-                  >Program</a
+                  >Program</NuxtLink
                 >
               </li>
               <li class="my-6">
-                <a
+                <NuxtLink
                   :class="textColor"
-                  href="#testimonials"
+                  to="/#testimonials"
                   v-on:click="isHidden = !isHidden"
-                  >Testimoni</a
+                  >Testimoni</NuxtLink
                 >
               </li>
               <li class="mb-6 mt-5">
-                <a
+                <NuxtLink
                   :class="textColor"
-                  href="#about"
+                  to="/#about"
                   v-on:click="isHidden = !isHidden"
-                  >Karir</a
+                  >Karir</NuxtLink
                 >
               </li>
               <li class="my-6">
@@ -269,6 +269,7 @@
 
       <Nuxt class="blur-md md:blur-none" @click="isHidden = !isHidden" v-if="!isHidden" />
       <Nuxt class="" @click="isHidden = !isHidden" v-else />
+      <FooterSection />
       <a
         id="fab"
         title="Contact Sale"

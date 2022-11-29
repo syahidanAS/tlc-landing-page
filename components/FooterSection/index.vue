@@ -79,8 +79,8 @@
           </h6>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5289439773173!2d107.3043686143415!3d-6.325426663654431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6976336b567ac5%3A0x5c67747972bf8334!2sThe%20Bright%20Learning%20Center!5e0!3m2!1sen!2sid!4v1669612227390!5m2!1sen!2sid"
-            width="400"
-            height="300"
+            width="350"
+            height="200"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
