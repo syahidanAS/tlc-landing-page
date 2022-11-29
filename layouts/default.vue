@@ -109,7 +109,7 @@
                   hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
                 "
                 :class="textColor"
-                to="/#about"
+                to="career"
                 >Karir</NuxtLink
               >
             </li>
@@ -142,9 +142,7 @@
                 <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/faqs"
                   >FAQ</NuxtLink
                 >
-                <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/registration"
-                  >Pendaftaran</NuxtLink
-                >
+
               </div>
             </li>
           </ul>
@@ -219,7 +217,7 @@
               <li class="mb-6 mt-5">
                 <NuxtLink
                   :class="textColor"
-                  to="/#about"
+                  to="/career"
                   v-on:click="isHidden = !isHidden"
                   >Karir</NuxtLink
                 >
@@ -256,9 +254,6 @@
                   </li>
                   <li>
                     <a :class="textColor" href="/faqs">FAQ</a>
-                  </li>
-                  <li>
-                    <a :class="textColor" href="/registration">Pendaftaran</a>
                   </li>
                 </ul>
               </li>
