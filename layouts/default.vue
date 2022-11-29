@@ -33,8 +33,11 @@
         <img src="~/assets/images/youtube-white-16.png" alt="youtube-alt" />
       </a>
     </div> -->
-    <div class="relative z-10 ">
-      <nav class="p-2 py-2] sticky top-0 z-50 md:py-3 shadow-sm shadow-slate-400" :class="navColor">
+    <div class="relative z-10">
+      <nav
+        class="p-2 py-3 sticky top-0 z-50 shadow-sm shadow-slate-400"
+        :class="navColor"
+      >
         <div
           class="
             flex
@@ -42,42 +45,43 @@
             justify-between
             items-center
             px-5
-            md:px-20 md:mx-auto
+            md:px-6
+            lg:px-6
+            xl:px-20
+            2xl:px-20
+            md:mx-auto
           "
         >
           <div class="flex">
-            <NuxtLink class="flex flex-row text-sky-400 font-bold text-2xl" to="/">
+            <NuxtLink
+              class="flex flex-row text-sky-400 font-bold text-2xl items-center"
+              to="/"
+            >
               <img class="w-10" src="~/assets/images/logo-blue.png" alt="" />
-              <h2 class="px-2 text-center pt-1">The Bright</h2>
+              <h2 class="px-2 text-center">The Bright</h2>
             </NuxtLink>
           </div>
-          <ul class="hidden font-bold text-md text-white md:flex md:gap-10">
+          <ul
+            class="
+              hidden
+              font-bold
+              text-md text-white
+              md:hidden
+              lg:flex lg:gap-10
+            "
+          >
             <li>
               <NuxtLink
-                class="
-                  transform
-                  block
-                  mt-2
-                  transition
-                  duration:500
-                  hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
-                "
+                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
                 :class="textColor"
                 to="/#about"
                 >Tentang Kami</NuxtLink
               >
             </li>
-           
+
             <li>
               <NuxtLink
-                class="
-                  transform
-                  block
-                  mt-2
-                  transition
-                  duration:500
-                  hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
-                "
+                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
                 :class="textColor"
                 to="/#programs"
                 >Program</NuxtLink
@@ -85,14 +89,7 @@
             </li>
             <li>
               <NuxtLink
-                class="
-                  transform
-                  block
-                  mt-2
-                  transition
-                  duration:500
-                  hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
-                "
+                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
                 :class="textColor"
                 to="/#testimonials"
                 >Testimoni</NuxtLink
@@ -100,27 +97,30 @@
             </li>
             <li>
               <NuxtLink
-                class="
-                  transform
-                  block
-                  mt-2
-                  transition
-                  duration:500
-                  hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
-                "
+                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
                 :class="textColor"
                 to="career"
                 >Karir</NuxtLink
               >
             </li>
             <li>
-              <p class="flex mt-2 cursor-pointer" :class="textColor" @click="isHiddenPopup = !isHiddenPopup"
-                >Informasi
+              <p
+                class="
+                  flex
+                  mt-2
+                  cursor-pointer
+                  hover:bg-slate-400 hover:rounded-md
+                "
+                :class="textColor"
+                @click="isHiddenPopup = !isHiddenPopup"
+              >
+                Informasi
                 <img
                   class="w-2 h-2 mx-2 my-2"
-                  :src="require('~/assets/images/'+downDirection)"
+                  :src="require('~/assets/images/' + downDirection)"
                   alt=""
-              /></p>
+                />
+              </p>
               <div
                 class="
                   flex flex-col
@@ -129,19 +129,21 @@
                   bg-white
                   z-40
                   -mb-20
-                
                   rounded-sm
                 "
-                @mouseleave ="isHiddenPopup = !isHiddenPopup"
+                @mouseleave="isHiddenPopup = !isHiddenPopup"
                 v-if="!isHiddenPopup"
               >
-                <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/articles"
+                <NuxtLink
+                  class="text-slate-600 font-light hover:bg-slate-300"
+                  to="/articles"
                   >Artikel</NuxtLink
                 >
-                <NuxtLink class="text-slate-600 font-light hover:bg-slate-300" to="/faqs"
+                <NuxtLink
+                  class="text-slate-600 font-light hover:bg-slate-300"
+                  to="/faqs"
                   >FAQ</NuxtLink
                 >
-
               </div>
             </li>
 
@@ -162,10 +164,9 @@
                 >Pendaftaran</a
               >
             </li>
-
           </ul>
           <div
-            class="flex md:hidden cursor-pointer"
+            class="flex lg:hidden cursor-pointer"
             v-on:click="isHidden = !isHidden"
             v-if="isHidden"
           >
@@ -176,7 +177,7 @@
             />
           </div>
           <div
-            class="flex md:hidden cursor-pointer"
+            class="flex lg:hidden cursor-pointer"
             v-on:click="isHidden = !isHidden"
             v-else
           >
@@ -188,7 +189,7 @@
           </div>
         </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden">
+        <div class="lg:hidden">
           <div
             v-if="!isHidden"
             class="
@@ -197,6 +198,7 @@
               flex-col
               px-7
               mt-2
+              py-5
               w-full
               space-y-2
               font-semibold
@@ -275,15 +277,23 @@
                   </li>
                 </ul>
               </li>
-
-    
-
+              <li>
+                <a
+                  class="p-2 bg-pink-500 mb-4 text-white hover:bg-pink-600 rounded-md"
+                  href="https://thebrightcourse.com/register"
+                  >Pendaftaran</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <Nuxt class="blur-md md:blur-none" @click="isHidden = !isHidden" v-if="!isHidden" />
+      <Nuxt
+        class="blur-md lg:blur-none"
+        @click="isHidden = !isHidden"
+        v-if="!isHidden"
+      />
       <Nuxt class="" @click="isHidden = !isHidden" v-else />
       <FooterSection />
       <a
@@ -357,12 +367,12 @@ export default {
         this.show = false;
       }
     },
-    normalizePopup(){
+    normalizePopup() {
       this.isHiddenPopup = true;
-    }
+    },
   },
-  mounted(){
-    this.normalizePopup()
+  mounted() {
+    this.normalizePopup();
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);

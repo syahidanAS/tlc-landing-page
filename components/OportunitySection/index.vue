@@ -7,7 +7,7 @@
         Our learning oportunity
       </h2>
       <!-- Oportunity Container -->
-      <div class="c flex flex-col mt-10 md:flex-row md:space-x-6 pb-20">
+      <div class="flex flex-col sm:px-0 md:px-4 lg:px-0 mt-10 md:flex-row md:space-x-6 pb-20">
         <!-- Oportunity 1 -->
         <div
           class="

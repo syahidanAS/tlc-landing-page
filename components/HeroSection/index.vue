@@ -1,23 +1,70 @@
 <template>
   <section id="hero">
     <div
-      class="container flex flex-col-reverse md:flex-row items-center px-20 mx-auto space-y-0 md:space-y-0">
+      class="
+        container
+        flex flex-col-reverse
+        md:flex-col-reverse
+        lg:flex-row
+        xl:flex-row
+        2xl:flex-row
+        items-center
+        px-20
+        md:px-0
+        lg:px-20
+        xl:px-20
+        2xl:px-20
+        mx-auto
+        space-y-0
+        md:space-y-0
+      "
+    >
       <!-- Left Item -->
       <div class="flex flex-col space-y-8 md:w-1/2">
         <h1
-          class="max-w-small text-2xl font-bold leading-snug text-center mt-4 md:text-5xl md:text-left text-slate-800 md:leading-snug md:text-4xl">
-          Ciptakan Masa Depan yang Lebih Baik<span class="text-white">
-            Bersama Kami</span>
+          class="
+            max-w-small
+            font-bold
+            leading-6
+            text-center
+            mt-4
+            text-2xl
+            md:text-4xl
+            lg:text-4xl
+            xl:text-5xl
+            2xl:text-5xl
+            lg:text-left
+            text-slate-800
+          "
+        >
+          Ciptakan Masa Depan yang Lebih Baik<span class="text-white text-center lg:text-left">
+            Bersama Kami</span
+          >
         </h1>
         <p
-          class="max-w-sm text-center md:text-left text-slate-700 md: leading-relaxed">
+          class="
+            max-w-sm
+            text-center
+            lg:text-left
+            text-white
+            font-semibold
+            leading-relaxed
+          "
+        >
           Learning Center Paling Terpercaya di Karawang
         </p>
-        <div class="flex justify-center md:justify-start">
+        <div class="flex justify-center lg:justify-start">
           <a
             href="https://thebrightcourse.com/register"
-            class="p-3 px-6 pt-2 text-white bg-slate-700 rounded-md hover:bg-slate-800"
-            >Daftar Sekarang!</a>
+            class="
+              p-3
+              text-white
+              bg-slate-700
+              rounded-md
+              hover:bg-slate-800
+            "
+            >Daftar Sekarang!</a
+          >
         </div>
       </div>
       <!-- Image -->

@@ -70,7 +70,7 @@
 
     <!-- About Container -->
     <div
-      class="flex flex-col gap-7 mx-auto mt-10 md:flex-row md:space-x-6 md:px-20 items-center">
+      class="flex flex-col gap-7 mx-auto mt-10 md:px-5 lg:flex-row  lg:px-32">
       <div data-aos="fade-up">
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Teach</span>

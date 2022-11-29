@@ -140,10 +140,22 @@ export default {
           disableOnInteraction: false,
         },
         breakpoints: {
-          1280: {
+          1536: {
             slidesPerView: 3,
           },
-          720: {
+          1280:{
+            slidesPerView: 3,
+          },
+          1024:{
+            slidesPerView: 3
+          },
+          768:{
+            slidesPerView: 2
+          },
+          750:{
+            slidesPerView: 2
+          },
+          640: {
             slidesPerView: 1,
           },
         },

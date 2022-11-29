@@ -32,12 +32,14 @@
           md:flex-row 
           md:bg-blue-500
           rounded-lg
-          md:gap-4
+          gap-1
+          md:gap-1
+          lg:gap-4
           mt-6
           md:mt-36
           py-4
           md:py-0
-          md:px-6
+          lg:px-6
         "
         data-aos="fade-down"
       >

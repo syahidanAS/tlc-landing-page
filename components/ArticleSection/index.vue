@@ -1,7 +1,7 @@
 <template>
   <section
     id="articles"
-    class="px-20  pt-2 bg-white pb-0 md:pb-20 md:px-32 md:pt-0 items-center"
+    class=" px-20 md:px-0 pt-2 bg-white pb-0 md:pb-20 lg:px-32 md:pt-0 items-center"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Artikel dan Berita Terbaru
