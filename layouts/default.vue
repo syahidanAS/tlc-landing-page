@@ -34,7 +34,7 @@
       </a>
     </div> -->
     <div class="relative z-10 ">
-      <nav class="p-2 py-2] sticky top-0 z-50 md:py-3 " :class="navColor">
+      <nav class="p-2 py-2] sticky top-0 z-50 md:py-3 shadow-sm shadow-slate-400" :class="navColor">
         <div
           class="
             flex
@@ -67,6 +67,7 @@
                 >Tentang Kami</a
               >
             </li>
+           
             <li>
               <a
                 class="
@@ -95,6 +96,21 @@
                 :class="textColor"
                 href="#testimonials"
                 >Testimoni</a
+              >
+            </li>
+            <li>
+              <a
+                class="
+                  transform
+                  block
+                  mt-2
+                  transition
+                  duration:500
+                  hover:scale-125 hover:bg-slate-400 hover:px-1 hover:rounded-md
+                "
+                :class="textColor"
+                href="#about"
+                >Karir</a
               >
             </li>
             <li>
@@ -198,6 +214,14 @@
                   href="#testimonials"
                   v-on:click="isHidden = !isHidden"
                   >Testimoni</a
+                >
+              </li>
+              <li class="mb-6 mt-5">
+                <a
+                  :class="textColor"
+                  href="#about"
+                  v-on:click="isHidden = !isHidden"
+                  >Karir</a
                 >
               </li>
               <li class="my-6">

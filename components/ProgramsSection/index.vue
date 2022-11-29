@@ -24,6 +24,7 @@
         <span class="text-pink-400 md:text-pink-400">Program</span> yang Anda
         Inginkan
       </h1>
+      <p class="text-center text-white md:text-slate-600 text-md ">Kami memiliki tenaga pengajar profesional sebanyak 40+ yang siap mendampingi anda belajar</p>
 
       <div
         class="
@@ -64,8 +65,7 @@
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>
-          <p class="text-slate-500 text-xs font-semibold">25 Student</p>
-          <h2
+          <NuxtLink
             class="
               text-end text-sm
               font-semibold
@@ -74,9 +74,10 @@
               hover:text-blue-600
               my-8
             "
+            to="/programs/bimbingan-belajar"
           >
             Selengkapnya
-          </h2>
+          </NuxtLink>
         </div>
         <div
           class="
@@ -100,10 +101,10 @@
         >
           <img src="~/assets/images/program-blue.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
-            Bimbingan Belajar
+            Bahasa Inggris Untuk Anak
+            <br>
           </h2>
-          <p class="text-slate-500 text-xs font-semibold">25 Student</p>
-          <h2
+          <NuxtLink
             class="
               text-end text-sm
               font-semibold
@@ -112,9 +113,10 @@
               hover:text-blue-600
               my-8
             "
+            to="/programs/bahasa-inggris"
           >
             Selengkapnya
-          </h2>
+        </NuxtLink>
         </div>
         <div
           class="
@@ -138,10 +140,9 @@
         >
           <img src="~/assets/images/program-orange.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
-            Bimbingan Belajar
+            English Course for Adults
           </h2>
-          <p class="text-slate-500 text-xs font-semibold">25 Student</p>
-          <h2
+          <NuxtLink
             class="
               text-end text-sm
               font-semibold
@@ -150,9 +151,10 @@
               hover:text-blue-600
               my-8
             "
+            to="/programs/english-course-for-adult"
           >
             Selengkapnya
-          </h2>
+          </NuxtLink>
         </div>
         <div
           class="
@@ -176,10 +178,9 @@
         >
           <img src="~/assets/images/program-yellow.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
-            Bimbingan Belajar
+            English for Specific Purposes
           </h2>
-          <p class="text-slate-500 text-xs font-semibold">25 Student</p>
-          <h2
+          <NuxtLink
             class="
               text-end text-sm
               font-semibold
@@ -188,9 +189,10 @@
               hover:text-blue-600
               my-8
             "
+            to="/programs/english-for-specific-purposes"
           >
             Selengkapnya
-          </h2>
+          </NuxtLink>
         </div>
         <div
           class="
@@ -214,10 +216,9 @@
         >
           <img src="~/assets/images/program-orange.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
-            Bimbingan Belajar
+            Kursus Bahasa Lainnya
           </h2>
-          <p class="text-slate-500 text-xs font-semibold">25 Student</p>
-          <h2
+          <NuxtLink
             class="
               text-end text-sm
               font-semibold
@@ -226,9 +227,10 @@
               hover:text-blue-600
               my-8
             "
+            to="/programs/kursus-bahasa-lainnya"
           >
             Selengkapnya
-          </h2>
+          </NuxtLink>
         </div>
       </div>
     </div>

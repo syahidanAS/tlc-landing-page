@@ -23,6 +23,7 @@
       <span class="text-slate-700 md:text-slate-500 text-center">Apa Kata</span>
       Mereka?
     </h1>
+    <p class="text-center text-slate-600 text-lg font-semibold">Sejak tahun 2016 The Bright sudah memiliki 700+ murid</p>
     <swiper
       v-show="swiperReady"
       ref="bannerSwiper"

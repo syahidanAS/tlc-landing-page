@@ -7,7 +7,7 @@
         px-4
         md:flex-row
         items-center
-        md:pt-32 md:px-20
+        md:pt-14 md:px-20
         mx-auto
         space-y-0
         md:space-y-0 md:mb-10

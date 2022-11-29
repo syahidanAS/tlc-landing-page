@@ -9,11 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@nuxtjs/axios": "^5.13.6",
     "@splidejs/vue-splide": "^0.6.12",
     "aos": "^2.3.4",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
+    "uninstall": "^0.0.0",
     "vue": "^2.7.10",
     "vue-awesome-swiper": "^4.1.1",
     "vue-easy-slider": "^5.3.4",

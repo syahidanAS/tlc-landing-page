@@ -15,6 +15,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: 'logo-blue.png' },
       {rel: "stylesheet", href: "https://cdn.jsdelivr.net/@ajusa/lit@1.0.0/dist/lit.css"}
     ],
+    script: [
+      { src: 'https://use.fontawesome.com/165d74492f.js' },
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

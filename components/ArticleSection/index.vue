@@ -1,12 +1,12 @@
 <template>
   <section
     id="articles"
-    class="px-20 pt-2 bg-white pb-0 md:pb-20 md:px-32 md:pt-0"
+    class="px-20  pt-2 bg-white pb-0 md:pb-20 md:px-32 md:pt-0 items-center"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
-      Artikel Terbaru
+      Artikel dan Berita Terbaru
     </h2>
-    <div class="flex flex-col md:flex-row px-0 pb-24 gap-4 mt-4 md:px-24 md:pb-0">
+    <div class="flex flex-col md:flex-row px-0 pb-12 gap-4 mt-4 md:px-24 md:pb-0">
       <!-- Article 1 -->
       <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden">
         <a href="#">
@@ -106,9 +106,12 @@
             <span class="text-sm my-2 text-slate-700 ">27 November 2022</span>
         </div>
       </div>
-
+    </div>
+    <div class="mt-0 md:mt-6 w-full text-center">
+      <NuxtLink class="py-2 px-3 border-2 border-sky-500 my-4 text-blue-500 font-semibold rounded-md hover:bg-sky-500 hover:text-white" to="/articles">Tampilkan Lebih Banyak</NuxtLink>
     </div>
   </section>
+  
 </template>
 
 <script>
