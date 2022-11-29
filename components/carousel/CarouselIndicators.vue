@@ -29,7 +29,7 @@ export default {
   width: 15px;
   height: 15px;
   border: none;
-  background: #fff;
+  background: white;
   opacity: 0.5;
   margin: 0.2em;
   cursor: pointer;
@@ -37,13 +37,25 @@ export default {
 .active {
   opacity: 1;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768){
   .carousel-indicators{
-    bottom: 55%;
+    bottom: 20%;
   }
   .carousel-indicator-item{
     width: 10px;
     height: 10px;
   }
 }
+@media only screen and (min-width: 1024){
+  .carousel-indicators{
+    bottom: 50%;
+  }
+  .carousel-indicator-item{
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+
 </style>

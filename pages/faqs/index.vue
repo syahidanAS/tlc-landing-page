@@ -1,5 +1,5 @@
 <template >
-  <div class="flex flex-col bg-white container mx-auto px-24 py-14">
+  <div class="flex flex-col bg-white container mx-auto px-14 md:px-24 py-14">
     <h1 class="text-2xl font-bold text-slate-700">Frequently Asked Question</h1>
     <h2 class="text-slate-600 font-normal mt-2 text-sm">
       Pertanyaan yang sering ditanyakan seputar The Bright Learning Center.
@@ -24,21 +24,7 @@
     </div>
     <!-- Content -->
    
-      <div class="grid md:grid-cols-12 gap-5 my-5">
-        <aside class="md:col-span-3 md:pt-0 border-[1px] border-slate-300 rounded-md grid grid-cols-1 divide-y  max-h-60 overflow-scroll">
-         <div class="py-2 px-4 hover:bg-sky-300 grid grid-cols-1 divide-y hover:cursor-pointer hover:text-white">
-          <h3 class="text-normal text-semibold text-slate-700 hover:cursor-pointer hover:text-white">Seputar Pendaftaran</h3>
-         </div>
-
-         <div class="py-2 px-4 hover:bg-sky-300 grid grid-cols-1 divide-y hover:cursor-pointer hover:text-white">
-          <h3 class="text-normal text-semibold text-slate-700 hover:cursor-pointer hover:text-white">Seputar Program</h3>
-         </div>
-
-         <div class="py-2 px-4 hover:bg-sky-300 grid grid-cols-1 divide-y hover:cursor-pointer hover:text-white">
-          <h3 class="text-normal text-semibold text-slate-700 hover:cursor-pointer hover:text-white">Seputar Jadwal Les</h3>
-         </div>
-         
-        </aside>
+      <div class="grid lg:grid-cols-12 gap-5 my-5">
         <main class="md:col-span-9 p-4 border-[1px] border-slate-300 rounded-md" >
           <div class="flex flex-col rounded-md shadow-sm shadow-slate-400 p-2 my-2" v-on:click="index = !index">
             <div class="

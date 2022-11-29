@@ -107,6 +107,7 @@ export default {
 .carousel {
   display: flex;
   justify-content: center;
+  padding-bottom: 80px;
 }
 .carousel-inner {
   position: relative;
