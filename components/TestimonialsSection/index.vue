@@ -1,7 +1,7 @@
 <template>
   <section
     id="testimonials"
-    class="px-14 pt-8 bg-white pb-0 md:pb-20 md:px-32 md:pt-20"
+    class="px-5 pt-8 bg-white pb-0 md:pb-20 md:px-32 2xl:px-52 md:pt-20"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Testimoni
@@ -24,6 +24,7 @@
       Mereka?
     </h1>
     <p class="text-center text-slate-600 text-lg font-semibold">Sejak tahun 2016 The Bright sudah memiliki 700+ murid</p>
+   <div class="mx-auto 2xl:mx-52">
     <swiper
       v-show="swiperReady"
       ref="bannerSwiper"
@@ -36,6 +37,7 @@
       @ready="swiperReady = true"
       @mouseover.native="pauseSwiper"
       @mouseleave.native="resumeSwiper"
+      
     >
       <swiper-slide>
         <div
@@ -120,6 +122,7 @@
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
+   </div>
   </section>
 </template>
 

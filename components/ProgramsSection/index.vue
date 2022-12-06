@@ -1,7 +1,7 @@
 <template>
   <section
     id="programs"
-    class="bg-blue-500 px-11 md:px-12 md:py-3 md:bg-white py-4"
+    class="bg-blue-500 px-5 md:px-12 md:py-3 md:bg-white py-4"
   >
     <div class="max-w-6xl mx-auto text-center py-12 px-4 md:py-0 md:px-0">
       <h2 class="text-white text-2xl font-bold text-center md:text-slate-700">
@@ -63,7 +63,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-purple.png" alt="" />
+          <img src="~/assets/images/program-blue.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bimbingan Belajar
           </h2>
@@ -101,7 +101,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-blue.png" alt="" />
+          <img src="~/assets/images/program-purple.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Bahasa Inggris Untuk Anak
             <br>
@@ -216,7 +216,7 @@
             opacity-95
           "
         >
-          <img src="~/assets/images/program-orange.png" alt="" />
+          <img src="~/assets/images/program-green.png" alt="" />
           <h2 class="my-2 text-slate-700 text-md font-semibold">
             Kursus Bahasa Lainnya
           </h2>

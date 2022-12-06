@@ -1,5 +1,5 @@
 <template >
-  <div class="flex flex-col bg-white container mx-auto px-14 md:px-24 py-14">
+  <div class="flex flex-col bg-white container mx-auto px-5 md:px-24 py-14 lg:pb-52 2xl:py-52">
     <h1 class="text-2xl font-bold text-slate-700">Frequently Asked Question</h1>
     <h2 class="text-slate-600 font-normal mt-2 text-sm">
       Pertanyaan yang sering ditanyakan seputar The Bright Learning Center.
@@ -18,21 +18,20 @@
           leading-tight
           focus:outline-none focus:shadow-outline
         " id="find" type="text" placeholder="Cari pertanyaan" />
-      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600">
+      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600 mx-2">
         Cari
       </button>
     </div>
     <!-- Content -->
    
       <div class="grid lg:grid-cols-12 gap-5 my-5">
-        <main class="md:col-span-9 p-4 border-[1px] border-slate-300 rounded-md" >
+        <main class="md:col-span-9 px-2 border-[1px] border-slate-300 rounded-md" >
           <div class="flex flex-col rounded-md shadow-sm shadow-slate-400 p-2 my-2" v-on:click="index = !index">
             <div class="
               flex flex-row    
               text-slate-700
               justify-between
               items-center
-              px-2
               hover:cursor-pointer
             ">
               <h1 class="text-sm font-semibold">

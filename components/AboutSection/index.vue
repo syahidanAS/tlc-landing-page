@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="mt-0 py-28 px-20 md:px-12 md:py-10 md:mt-20 bg-white">
+  <section id="about" class="mt-0 py-28 px-5 md:px-12 md:py-10 md:mt-20 bg-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-center text-slate-600">
         Tentang Kami
@@ -70,12 +70,12 @@
 
     <!-- About Container -->
     <div
-      class="flex flex-col gap-7 mx-auto mt-10 md:px-5 lg:flex-row  lg:px-32">
-      <div data-aos="fade-up">
+      class="flex gap-7 md:mx-auto 2xl:mx-52 flex-col mx-auto mt-10 md:px-5 xl:px-48 lg:flex-row">
+      <div data-aos="fade-up ">
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Teach</span>
         </h2>
-        <p class="text-md font-semibold text-slate-800 text-justify">
+        <p class="text-md font-normal text-slate-800 text-justify ">
           Membimbing peserta didik dalam menguasai pelajaran di sekolah dan
           mengajarkan bahasa asing secara terintegrasi sesuai kebutuhan customer
         </p>
@@ -84,7 +84,7 @@
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Share</span>
         </h2>
-        <p class="text-md font-semibold text-slate-800 text-justify">
+        <p class="text-md font-normal text-slate-800 text-justify ">
           Berkontribusi dalam kegiatan sosial dengan memberikan serta
           menyalurkan bantuan seperti: beasiswa, trauma healing, kegiatan
           kerelawanan, dan pengabdian masyarakat
@@ -94,7 +94,7 @@
         <h2 class="text-slate-800 font-bold text-2xl">
           We <span class="text-blue-500">Care</span>
         </h2>
-        <p class="text-md font-semibold text-slate-800 text-justify">
+        <p class="text-md font-normal text-slate-800 text-justify ">
           Meningkatkan kepedulian terhadap sesama dengan berperan aktif dalam
           kegiatan sosial yang tidak terlepas dari nilai-nilai sociopreneurship
           yang menjadi prinsip dasar The Bright Learning Center

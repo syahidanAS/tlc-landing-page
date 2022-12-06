@@ -9,14 +9,14 @@
         xl:flex-row
         2xl:flex-row
         items-center
-        px-20
+        px-5
         md:px-0
         lg:px-20
         xl:px-20
         2xl:px-20
         mx-auto
-        space-y-0
-        md:space-y-0
+        space-y-14
+        md:space-y-10
       "
     >
       <!-- Left Item -->
@@ -45,10 +45,10 @@
           class="
             max-w-sm
             text-center
-            lg:text-left
             text-white
             font-semibold
             leading-relaxed
+            md:text-left
           "
         >
           Learning Center Paling Terpercaya di Karawang

@@ -1,5 +1,5 @@
 <template >
-  <div class="flex flex-col bg-white container mx-auto px-24 py-14">
+  <div class="flex flex-col bg-white container mx-auto px-5 md:px-24 py-10 pb-40">
     <h1 class="text-2xl font-bold text-slate-700">
       Artikel dan Berita The Bright Learning Center
     </h1>
@@ -26,7 +26,7 @@
         type="text"
         placeholder="Cari artikel atau berita"
       />
-      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600">
+      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600 mx-2">
         Cari
       </button>
     </div>
@@ -91,9 +91,12 @@
     </div>
 
     <div
-      class="flex flex-col container mx-auto py-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      class="flex flex-col container mx-auto px-4 md:px-0 py-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
     >
       <!-- Card Items -->
+      <article-card-skeleton v-if="isLoading"></article-card-skeleton>
+      <article-card-skeleton v-if="isLoading"></article-card-skeleton>
+      <article-card-skeleton v-if="isLoading"></article-card-skeleton>
       <div
         class="
           col-span-1
@@ -104,10 +107,13 @@
           overflow-hidden
           rounded-md
         "
+        v-else
+        v-for="article in articles"
+        :key="article.index"
       >
         <img
           class="w-full h-36"
-          src="https://static01.nyt.com/images/2021/07/12/nyregion/12-THE-MORNING-NL-lede/merlin_187216488_e4583e93-36b2-4109-8458-6ea155710ed0-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+          :src="article.image_url"
           alt=""
         />
         <!-- Card Body -->
@@ -119,9 +125,10 @@
               text-slate-700 text-base
               hover:underline hover:cursor-pointer
             "
-            to="/articles/Ini Adalah Artikel Mantap Jiwa"
-            >Lorem ipsum, dolor sit amet consectetur adipisicing </NuxtLink
+            :to="`articles/${article.slug}`"
+            >{{ article.title }}</NuxtLink
           >
+          <br>
           <span
             class="
               my-2
@@ -134,7 +141,7 @@
               rounded
               dark:bg-blue-200 dark:text-blue-800
             "
-            >Pendidikan</span
+            >{{ article.category }}</span
           >
           <p class="my-2 text-xs font-normal text-slate-600">
             29 November 2022
@@ -147,7 +154,36 @@
 </template>
 
 <script>
-export default {};
+import ArticleCardSkeleton from '~/components/ArticleCardSkeleton';
+export default {
+  components: { ArticleCardSkeleton },
+  data(){
+    return{
+      articles:[],
+      isLoading:true
+    }
+  },
+  mounted() {
+    this.getArticles()
+},
+  methods:{
+    async getArticles() {
+      this.isLoading = true
+      try{
+        const payload = await this.$axios.$get('published/articles')
+        this.articles = payload.data
+        this.isLoading = false
+      }catch(error){
+        this.isLoading = true
+        alert('Maaf gagal memuat artikel')
+      }
+
+    },
+  },
+
+
+
+};
 </script>
 
 <style>

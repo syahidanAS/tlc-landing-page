@@ -10,6 +10,7 @@
         md:pt-14 md:px-20
         mx-auto
         space-y-0
+        2xl:px-44
         md:space-y-0 md:mb-10
       "
     >

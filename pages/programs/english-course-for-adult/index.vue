@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-24 py-14">
+  <div class="container mx-auto px-5 md:px-24 py-2 pb-32 md:py-14">
     <NuxtLink
       class="flex flex-row text-sky-500 text-md gap-2 py-2"
       to="/#programs"

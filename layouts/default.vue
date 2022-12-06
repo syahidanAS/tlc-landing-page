@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-screen justify-between">
     <!-- <div
       class="
         flex
@@ -35,7 +35,7 @@
     </div> -->
     <div class="relative z-10">
       <nav
-        class="p-2 py-3 sticky top-0 z-50 shadow-sm shadow-slate-400"
+        class="py-3 sticky top-0 z-50 shadow-sm shadow-slate-400"
         :class="navColor"
       >
         <div
@@ -48,17 +48,17 @@
             md:px-6
             lg:px-6
             xl:px-20
-            2xl:px-20
+            2xl:px-44
             md:mx-auto
           "
         >
           <div class="flex">
             <NuxtLink
-              class="flex flex-row text-sky-400 font-bold text-2xl items-center"
+              class="flex flex-row text-sky-400 font-bold text-2xl items-center "
               to="/"
             >
-              <img class="w-10" src="~/assets/images/logo-blue.png" alt="" />
-              <h2 class="px-2 text-center">The Bright</h2>
+              <img class="w-20 md:w-28 rounded-md" src="~/assets/images/logo-thebright.jpeg" alt="" />
+
             </NuxtLink>
           </div>
           <ul
@@ -72,8 +72,8 @@
           >
             <li>
               <NuxtLink
-                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
-                :class="textColor"
+                class="block mt-2 px-1 py-1 hover:rounded-md"
+                :class="[textColor, hoverColor]"
                 to="/#about"
                 >Tentang Kami</NuxtLink
               >
@@ -81,37 +81,38 @@
 
             <li>
               <NuxtLink
-                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
-                :class="textColor"
+                class="block mt-2 hover:rounded-md px-1 py-1"
+                :class="[textColor, hoverColor]"
                 to="/#programs"
                 >Program</NuxtLink
               >
             </li>
             <li>
               <NuxtLink
-                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
-                :class="textColor"
+                class="block mt-2 hover:rounded-md px-1 py-1"
+                :class="[textColor, hoverColor]"
                 to="/#testimonials"
                 >Testimoni</NuxtLink
               >
             </li>
-            <li>
+            <!-- <li>
               <NuxtLink
-                class="block mt-2 hover:bg-slate-400 hover:rounded-md"
-                :class="textColor"
+                class="block mt-2 hover:rounded-md hover:px-1 hover:py-1"
+                :class="[textColor, hoverColor]"
                 to="career"
                 >Karir</NuxtLink
               >
-            </li>
+            </li> -->
             <li>
               <p
                 class="
                   flex
                   mt-2
                   cursor-pointer
-                  hover:bg-slate-400 hover:rounded-md
+                   hover:rounded-md
+                   px-1 py-1
                 "
-                :class="textColor"
+                :class="[textColor, hoverColor]"
                 @click="isHiddenPopup = !isHiddenPopup"
               >
                 Informasi
@@ -130,24 +131,25 @@
                   z-40
                   -mb-20
                   rounded-sm
+                  px-5
                 "
                 @mouseleave="isHiddenPopup = !isHiddenPopup"
                 v-if="!isHiddenPopup"
               >
                 <NuxtLink
-                  class="text-slate-600 font-light hover:bg-slate-300"
+                  class="text-slate-600 font-normal hover:bg-slate-100 hover:rounded-md "
                   to="/articles"
                   >Artikel</NuxtLink
                 >
                 <NuxtLink
-                  class="text-slate-600 font-light hover:bg-slate-300"
+                  class="text-slate-600 font-normal hover:bg-slate-100 hover:rounded-md "
                   to="/faqs"
                   >FAQ</NuxtLink
                 >
               </div>
             </li>
 
-            <li>
+            <li class="px-1 py-1">
               <a
                 class="
                   bg-pink-500
@@ -159,6 +161,7 @@
                   duration:500
                   hover:bg-pink-600
                   text-white
+                  
                 "
                 :href="registerLink"
                 >Pendaftaran</a
@@ -193,56 +196,53 @@
           <div
             v-if="!isHidden"
             class="
-              opacity-95
               absolute
               flex-col
               px-7
               mt-2
               py-5
               w-full
+              h-screen
               space-y-2
               font-semibold
               drop-shadow-sm
-              -ml-2
+              
               text-white
               border-t border-slate-200
             "
             :class="navColor"
           >
             <ul>
-              <li class="mb-6 mt-5">
+              <li class="mb-10 mt-5" v-on:click="isHidden = !isHidden">
                 <NuxtLink
+                  class="hover:bg-slate-50"
                   :class="textColor"
                   to="/#about"
-                  v-on:click="isHidden = !isHidden"
                   >Tentang Kami</NuxtLink
                 >
               </li>
-              <li class="my-6">
+              <li class="my-10" v-on:click="isHidden = !isHidden">
                 <NuxtLink
                   :class="textColor"
                   to="/#programs"
-                  v-on:click="isHidden = !isHidden"
                   >Program</NuxtLink
                 >
               </li>
-              <li class="my-6">
+              <li class="my-10" v-on:click="isHidden = !isHidden">
                 <NuxtLink
                   :class="textColor"
                   to="/#testimonials"
-                  v-on:click="isHidden = !isHidden"
                   >Testimoni</NuxtLink
                 >
               </li>
-              <li class="mb-6 mt-5">
+              <!-- <li class="mb-6 mt-5" v-on:click="isHidden = !isHidden">
                 <NuxtLink
                   :class="textColor"
                   to="/career"
-                  v-on:click="isHidden = !isHidden"
                   >Karir</NuxtLink
                 >
-              </li>
-              <li class="my-6">
+              </li> -->
+              <li class="my-10">
                 <div class="flex flex-row gap-2" @click="isExpand = !isExpand">
                   <p class="cursor-pointer" :class="textColor">Informasi</p>
                   <img
@@ -264,7 +264,7 @@
                     flex flex-col
                     gap-2
                     mt-2
-                    font-thin
+                    font-normal
                     border-l-2 border-indigo-500
                   "
                   v-if="isExpand"
@@ -322,6 +322,8 @@
       >
         <img src="~/assets/images/arrow-up-white-24.png" alt="" />
       </a>
+
+      
     </div>
   </div>
 </template>
@@ -343,20 +345,23 @@ export default {
       downDirection: "arrow-down-slate-24.png",
       show: false,
       registerLink: process.env.REGISTRATION_FORM,
+      hoverColor:"hover:bg-slate-200",
+      
     };
   },
   methods: {
     handleScroll() {
       // Your scroll handling here
       if (window.scrollY > 1000) {
-        this.navColor = "bg-slate-700";
-        this.textColor = "text-white hover:text-slate-200";
-        this.menuTheme = "menu-white-64.png";
-        this.closeTheme = "close-white-64.png";
-        this.upDirection = "arrow-up-white-24.png";
-        this.downDirection = "arrow-down-white-24.png";
+        this.navColor = "bg-white";
+        this.textColor = "text-slate-700 hover:text-slate-800";
+        this.menuTheme = "menu-slate-64.png";
+        this.closeTheme = "close-slate-64.png";
+        this.upDirection = "arrow-up-slate-24.png";
+        this.downDirection = "arrow-down-slate-24.png";
         this.navOpacity = "opacity-1";
         this.show = true;
+        this.hoverColor = "hover:bg-slate-400"
       } else {
         this.navColor = "bg-white";
         this.textColor = "text-slate-700 hover:text-slate-800";
@@ -364,8 +369,9 @@ export default {
         this.closeTheme = "close-slate-64.png";
         this.upDirection = "arrow-up-slate-24.png";
         this.downDirection = "arrow-down-slate-24.png";
-        this.navOpacity = "opacity-0.95";
-        this.show = false;
+        this.navOpacity = "opacity-1";
+        this.show = true;
+        this.hoverColor = "hover:bg-slate-400"
       }
     },
     normalizePopup() {
