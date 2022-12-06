@@ -1,6 +1,30 @@
 <template>
   <div class="flex flex-col bg-white container mx-auto md:px-24 py-14">
-    <div id="heading" class="flex flex-col px-5 md:px-24">
+    <div class="flex flex-col gap-4" v-if="isLoading">
+      <div class="w-72 h-9 animate-pulse bg-gray-300 rounded-md"></div>
+      <div class="w-60 h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-36 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    <div class="w-full h-4 animate-pulse bg-gray-300 rounded-md"></div>
+    </div>
+
+    <div v-else>
+      <div id="heading" class="flex flex-col px-5 md:px-24" >
       <h1
         class="text-center text-2xl font-bold text-slate-700 mx-auto lg:px-32"
       >
@@ -16,7 +40,7 @@
       />
     </div>
     
-    <div class="flex flex-col px-5 py-4 md:px-24 mt-4">
+    <div class="flex flex-col px-5 py-4 md:px-24 mt-4" >
       <h2 class="text-start text-sm font-normal text-slate-600">
         <b>Diposting Pada: {{ formatDate(published_at) }}</b>
         <br>
@@ -41,6 +65,7 @@
     <div class="container font-normal px-5 md:px-24 leading-6 text-slate-700">
       <p class="text-justify">{{ body }}</p>
       
+    </div>
     </div>
   </div>
 </template>
