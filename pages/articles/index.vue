@@ -161,7 +161,7 @@ export default {
     async getArticles() {
       this.isLoading = true
       try{
-        this.notFound = false
+        this.notFound = false 
         const payload = await this.$axios.$get('published/articles')
         this.articles = payload.data
         this.isLoading = false

@@ -1,7 +1,7 @@
 <template>
   <section
     id="testimonials"
-    class="px-5 pt-8 bg-white pb-0 md:pb-20 md:px-32 2xl:px-52 md:pt-20"
+    class="px-5 pt-8 bg-white pb-0  md:px-32 2xl:px-52 md:pt-20"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Testimoni
@@ -39,7 +39,31 @@
       @mouseleave.native="resumeSwiper"
       
     >
-      <swiper-slide>
+      <swiper-slide v-if="isLoading">
+        <div
+          class="
+            flex flex-col
+            max-w-sm
+            gap-2
+            rounded-md
+            items-center
+            shadow-sm shadow-slate-400
+            my-14
+            py-8
+            bg-white
+            px-4
+          "
+          
+        >
+        <div class="w-24 h-24 animate-pulse bg-gray-300 rounded-full">
+
+        </div>
+          <div class="w-full h-5 bg-gray-300 animate-pulse rounded-md"></div>
+          <div class="w-full h-5 bg-gray-300 animate-pulse rounded-md"></div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide v-for="item in testimonials" :key="item.index" v-else>
         <div
           class="
             flex flex-col
@@ -56,70 +80,16 @@
         >
           <img
             class="rounded-full w-24 h-24"
-            src="~/assets/images/boy.jpg"
+            :src="item.image_url"
             alt="testimonial"
           />
-          <h2 class="text-2xl text-slate-800 font-bold">Joni De</h2>
+          <h2 class="text-2xl text-slate-800 font-bold">{{ item.name }}</h2>
           <p class="text-sm text-slate-600 font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
-            facere.
+            {{ item.testimonial }}
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide>
-        <div
-          class="
-            flex flex-col
-            max-w-sm
-            gap-2
-            rounded-md
-            items-center
-            shadow-sm shadow-slate-400
-            my-14
-            bg-white
-            py-8
-            px-4
-          "
-        >
-          <img
-            class="rounded-full w-24 h-24"
-            src="~/assets/images/program-purple.png"
-            alt="testimonial"
-          />
-          <h2 class="text-2xl text-slate-800 font-bold">Jane Di</h2>
-          <p class="text-sm text-slate-600 font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
-            facere.
-          </p>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div
-          class="
-            flex flex-col
-            max-w-sm
-            gap-2
-            rounded-md
-            items-center
-            shadow-sm shadow-slate-400
-            my-14
-            py-8
-            px-4
-            bg-white
-          "
-        >
-          <img
-            class="rounded-full w-24 h-24"
-            src="~/assets/images/boy.jpg"
-            alt="testimonial"
-          />
-          <h2 class="text-2xl text-slate-800 font-bold">Joni De</h2>
-          <p class="text-sm text-slate-600 font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
-            facere.
-          </p>
-        </div>
-      </swiper-slide>
+
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
    </div>
@@ -130,6 +100,8 @@
 export default {
   data() {
     return {
+      isLoading: false,
+      testimonials: [],
       swiperReady: false,
       swiperOptions: Object.freeze({
         slidesPerView: 1,
@@ -171,6 +143,18 @@ export default {
     },
   },
   methods: {
+    async getTestimonials(){
+      this.isLoading = true
+      try{
+        const payload = await this.$axios.$get('testimonials')
+        this.testimonials = payload.data
+        this.isLoading = false
+      }catch(error){
+        this.isLoading = true
+      }
+    },
+
+
     pauseSwiper() {
       if (this.swiper) {
         this.swiper.autoplay.stop();
@@ -182,6 +166,9 @@ export default {
       }
     },
   },
+  mounted(){
+    this.getTestimonials()
+  }
 };
 </script>
 
