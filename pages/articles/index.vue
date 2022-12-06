@@ -25,8 +25,10 @@
         id="find"
         type="text"
         placeholder="Cari artikel atau berita"
+        v-model="inputSearch"
+        @input="submit()"
       />
-      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600 mx-2">
+      <button class="px-6 rounded-md bg-sky-500 text-white hover:bg-sky-600 mx-2" @click="submit()">
         Cari
       </button>
     </div>
@@ -43,9 +45,11 @@
           rounded-md
           hover:text-white
         "
-      >
-        Pendidikan
+        @click="getArticles()"
+        >
+      Semua Kategori
       </button>
+
       <button
         class="
           text-xs
@@ -57,46 +61,24 @@
           rounded-md
           hover:text-white
         "
+        v-for="category in categories"
+        :key="category.index"
+        @click="findByCategory(category.id)"
       >
-        Sosial
+        {{ category.category }}
       </button>
-      <button
-        class="
-          text-xs
-          font-semibold
-          text-sky-500
-          border-2 border-sky-500
-          hover:bg-sky-500
-          p-1
-          rounded-md
-          hover:text-white
-        "
-      >
-        Kegiatan
-      </button>
-      <button
-        class="
-          text-xs
-          font-semibold
-          text-sky-500
-          border-2 border-sky-500
-          hover:bg-sky-500
-          p-1
-          rounded-md
-          hover:text-white
-        "
-      >
-        Prestasi
-      </button>
+
     </div>
 
     <div
       class="flex flex-col container mx-auto px-4 md:px-0 py-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
     >
+   
       <!-- Card Items -->
       <article-card-skeleton v-if="isLoading"></article-card-skeleton>
       <article-card-skeleton v-if="isLoading"></article-card-skeleton>
       <article-card-skeleton v-if="isLoading"></article-card-skeleton>
+      <img class="w-80 mx-auto" src="~/assets/images/not-found.svg" alt="" v-else-if="notFound">
       <div
         class="
           col-span-1
@@ -160,25 +142,69 @@ export default {
   data(){
     return{
       articles:[],
-      isLoading:true
+      categories:[],
+      isLoading:true,
+      inputSearch:'',
+      notFound: false,
     }
   },
   mounted() {
-    this.getArticles()
+    this.getArticles();
+    this.getCategories();
+    
 },
   methods:{
+    async getCategories(){
+        const payload = await this.$axios.$get('categories')
+        this.categories = payload.data
+    },
     async getArticles() {
       this.isLoading = true
       try{
+        this.notFound = false
         const payload = await this.$axios.$get('published/articles')
         this.articles = payload.data
         this.isLoading = false
       }catch(error){
         this.isLoading = true
+        this.notFound = true
+      }
+    },
+
+    async findByCategory(id){
+      this.isLoading = true
+      try{
+        this.notFound = false
+        const payload = await this.$axios.$get(`published/articles/${id}`)
+        this.articles = payload.data
+        this.isLoading = false
+      }catch(error){
+        this.isLoading = true
+        this.notFound = true
+      }
+    },
+
+    async submit(){
+      this.isLoading = true
+      try{
+        const payload = await this.$axios.$post('published-articles/search',{
+          title: this.inputSearch
+        })
+        if(payload.data.length > 0){
+          this.notFound = false
+          this.articles = payload.data
+          this.isLoading = false
+        }else{
+          this.isLoading = false
+          this.notFound = true
+
+        }
+        
+      }catch(error){
+        this.isLoading = true
         alert('Maaf gagal memuat artikel')
       }
-
-    },
+    }
   },
 
 

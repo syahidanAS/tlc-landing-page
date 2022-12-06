@@ -53,13 +53,13 @@
 
       <!-- Article 1 -->
       <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden" v-for="item in articles.slice(0,3)" :key="item.index" v-else>
-        <a href="#">
+        <NuxtLink :to="`/articles/${item.slug}`">
           <img
             class="w-full h-44 hover:opacity-95"
             :src="item.image_url"
             alt=""
           />
-        </a>
+        </NuxtLink>
         <div class="p-5">
         
             <NuxtLink

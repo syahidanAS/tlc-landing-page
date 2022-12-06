@@ -370,7 +370,7 @@ export default {
         this.upDirection = "arrow-up-slate-24.png";
         this.downDirection = "arrow-down-slate-24.png";
         this.navOpacity = "opacity-1";
-        this.show = true;
+        this.show = false;
         this.hoverColor = "hover:bg-slate-400"
       }
     },
