@@ -345,7 +345,7 @@ export default {
       downDirection: "arrow-down-slate-24.png",
       show: false,
       registerLink: process.env.REGISTRATION_FORM,
-      hoverColor:"hover:bg-slate-200",
+      hoverColor:"hover:bg-slate-50",
       
     };
   },
@@ -371,7 +371,7 @@ export default {
         this.downDirection = "arrow-down-slate-24.png";
         this.navOpacity = "opacity-1";
         this.show = false;
-        this.hoverColor = "hover:bg-slate-400"
+        this.hoverColor = "hover:bg-slate-50"
       }
     },
     normalizePopup() {
