@@ -176,8 +176,15 @@ export default {
       try{
         this.notFound = false
         const payload = await this.$axios.$get(`published/articles/${id}`)
-        this.articles = payload.data
-        this.isLoading = false
+        if(payload.data.length > 0){
+          this.notFound = false
+          this.articles = payload.data
+          this.isLoading = false
+        }else{
+          this.isLoading = false
+          this.notFound = true
+
+        }
       }catch(error){
         this.isLoading = true
         this.notFound = true
