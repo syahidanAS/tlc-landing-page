@@ -6,7 +6,7 @@
       >
         {{ title }}
       </h1>
-      <h3 class="mb-4 text-xs font-normal text-slate-600 text-center">
+      <h3 class="mb-4 text-sm font-semibold text-slate-600 text-center">
         Ditulis oleh : {{ writer }}
       </h3>
       <img
@@ -15,15 +15,32 @@
         alt="article-image"
       />
     </div>
+    
     <div class="flex flex-col px-5 py-4 md:px-24 mt-4">
-      <h1 class="text-lg font-bold text-slate-700">{{ slug }}</h1>
       <h2 class="text-start text-sm font-normal text-slate-600">
-        Selasa, 29 November 2022 <span>09.33</span>
+        <b>Diposting Pada: {{ formatDate(published_at) }}</b>
+        <br>
+        <span
+            class="
+              my-2
+              bg-blue-100
+              text-blue-800 text-xs
+              font-semibold
+              mr-2
+              px-2.5
+              py-0.5
+              rounded
+              dark:bg-blue-200 dark:text-blue-800
+            "
+            >{{ category }}</span
+          >
       </h2>
+      
     </div>
     <!-- Body Section -->
     <div class="container font-normal px-5 md:px-24 leading-6 text-slate-700">
       <p class="text-justify">{{ body }}</p>
+      
     </div>
   </div>
 </template>
@@ -32,12 +49,15 @@
 import ArticleCardSkeleton from '~/components/ArticleCardSkeleton';
 export default {
   components: { ArticleCardSkeleton },
+  
   data(){
     return{
       title:null,
       body:null,
       writer:null,
       image_url:null,
+      published_at:null,
+      category: null,
       isLoading:true,
       slug: null,
     }
@@ -54,6 +74,7 @@ export default {
         ]
     }
 },
+
   mounted() {
     this.getArticles()
 },
@@ -67,12 +88,18 @@ export default {
         this.body = payload.data[0].body
         this.writer = payload.data[0].writer
         this.image_url = payload.data[0].image_url
+        this.published_at = payload.data[0].published_at,
+        this.category = payload.data[0].category,
         this.isLoading = false
       }catch(error){
         this.isLoading = true
         alert('Maaf gagal memuat artikel')
       }
 
+    },
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('id', options)
     },
   },
 

@@ -14,9 +14,9 @@
       @mouseover.native="pauseSwiper"
       @mouseleave.native="resumeSwiper"
     >
-      <swiper-slide v-for="item in advers" :key="item.index">
+      <swiper-slide  v-for="item in advers" :key="item.index">
         <a :href="item.desc">
-          <img :src="item.image_url" alt=""/>
+          <img class="rounded-lg" :src="item.image_url" alt=""/>
         </a>
       </swiper-slide>
 
