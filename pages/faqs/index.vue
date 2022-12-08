@@ -26,7 +26,9 @@
    
       <div class="grid lg:grid-cols-12 gap-5 my-5">
         <main class="md:col-span-9 px-2 border-[1px] border-slate-300 rounded-md" >
-          <div class="flex flex-col rounded-md shadow-sm shadow-slate-400 p-2 my-2" v-on:click="index = !index">
+
+
+          <div class="flex flex-col rounded-md shadow-sm shadow-slate-400 p-2 my-2" v-for="item in faqs" :key="item.index" @click="toggle()">
             <div class="
               flex flex-row    
               text-slate-700
@@ -35,16 +37,13 @@
               hover:cursor-pointer
             ">
               <h1 class="text-sm font-semibold">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti, illo.
+                {{ item.question }}
               </h1>
               <img class="w-3 h-3" src="~/assets/images/arrow-down-slate-24.png" alt="arrow" />
             </div>
 
-            <div class="px-2 text-sm text-slate-600 my-4 border-t-[1px] py-2" v-if="!index">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci magnam voluptates blanditiis
-                sapiente, recusandae rerum est ut autem veritatis, laboriosam eaque magni natus modi explicabo deserunt
-                obcaecati, et quasi cum.</p>
+            <div class="px-2 text-sm text-slate-600 my-4 border-t-[1px] py-2" :class="accordionClasses">
+              <p>{{ item.answer }}</p>
             </div>
           </div>
           
@@ -59,9 +58,46 @@
 export default {
   data(){
     return{
-      index: true
+      index: true,
+      isLoading: false,
+      nostFound: false,
+      faqs:[],
+      isOpen: true,
+      accordionClasses:'hidden'
     }
-  }
+  },
+  methods:{
+    toggle(){
+      if(this.accordionClasses == 'hidden'){
+        this.accordionClasses = ''
+      }else{
+        this.accordionClasses = 'hidden'
+      }
+    },
+    async getFaqs(){
+      this.isLoading = true
+      try{
+        this.notFound = false
+        const payload = await this.$axios.$get('faqs')
+        if(payload.data.length > 0){
+          this.notFound = false
+          this.faqs = payload.data
+          this.isLoading = false
+        }else{
+          this.isLoading = false
+          this.notFound = true
+
+        }
+      }catch(error){
+        this.isLoading = true
+        this.notFound = true
+      }
+    },
+  },
+  mounted(){
+    this.getFaqs();
+  },
+
 };
 </script>
 

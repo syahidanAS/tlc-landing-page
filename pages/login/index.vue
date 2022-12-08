@@ -12,8 +12,8 @@
 <script>
 export default {
     layout:'adminDefault',
-    // auth: false,
-    middleware: 'auth',
+    auth: false,
+    middleware: 'guest',
     data (){
         return{
             email: '',
@@ -22,15 +22,27 @@ export default {
         }
     },
     methods:{
-        login(){
-            this.$auth.loginWith('local', {
+        async login(){
+            try{
+                const result = await this.$auth.loginWith('local',{
                 data:{
                     email: this.email,
                     password: this.password
                 }
-            }).then(() => {
-                this.$router.push('/dashboard')
-            })
+                })
+                console.log(result);
+                    this.$router.push('/dashboard')
+            }catch({error}){
+               console.log(error);
+            }
+            // this.$auth.loginWith('local', {
+            //     data:{
+            //         email: this.email,
+            //         password: this.password
+            //     }
+            // }).then(() => {
+            //     this.$router.push('/dashboard')
+            // })
         }
     },
     mounted(){

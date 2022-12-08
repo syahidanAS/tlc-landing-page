@@ -361,7 +361,7 @@ export default {
         this.downDirection = "arrow-down-slate-24.png";
         this.navOpacity = "opacity-1";
         this.show = true;
-        this.hoverColor = "hover:bg-slate-400"
+        this.hoverColor = "hover:bg-slate-50"
       } else {
         this.navColor = "bg-white";
         this.textColor = "text-slate-700 hover:text-slate-800";
