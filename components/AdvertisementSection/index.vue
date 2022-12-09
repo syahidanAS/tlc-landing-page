@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-16 px-5 bg-white  md:pb-20 md:px-32 2xl:px-52 md:pt-14">
+  <section class="pb-16 px-5 bg-white  md:pb-20 md:px-32 2xl:px-52 md:pt-14 z-0">
     <swiper
    
       v-show="swiperReady"

@@ -15,7 +15,9 @@
             transform
             transition
             duration-500
-            hover:scale-125 hover:z-10 hover:bg-white
+            hover:scale-125 
+            z-0 
+            hover:bg-white
             w-3/4
             my-2
             mx-auto
@@ -45,7 +47,8 @@
             transform
             transition
             duration-500
-            hover:scale-125 hover:z-10
+            hover:scale-125 
+            z-0
             flex-col
             w-3/4
             my-2
@@ -81,7 +84,8 @@
             transform
             transition
             duration-500
-            hover:scale-125 hover:z-10 hover:bg-white
+            hover:scale-125 
+            z-0 hover:bg-white
             flex-col
             w-3/4
             my-2

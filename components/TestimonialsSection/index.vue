@@ -1,7 +1,7 @@
 <template>
   <section
     id="testimonials"
-    class="px-5 pt-8 bg-white pb-0  md:px-32 2xl:px-52 md:pt-20"
+    class=" px-5 pt-8 bg-white pb-0  md:px-32 2xl:px-52 md:pt-20"
   >
     <h2 class="text-slate-700 text-2xl font-bold text-center md:text-slate-600">
       Testimoni
@@ -33,7 +33,7 @@
       :auto-destroy="true"
       :delete-instance-on-destroy="true"
       :cleanup-styles-on-destroy="false"
-      class="text-center items-center mx-auto md:mx-0"
+      class="text-center items-center mx-auto md:mx-0 z-0"
       @ready="swiperReady = true"
       @mouseover.native="pauseSwiper"
       @mouseleave.native="resumeSwiper"
@@ -63,7 +63,7 @@
         </div>
       </swiper-slide>
 
-      <swiper-slide v-for="item in testimonials" :key="item.index" v-else>
+      <swiper-slide class="z-0" v-for="item in testimonials" :key="item.index" v-else>
         <div
           class="
             flex flex-col
@@ -76,6 +76,7 @@
             py-8
             bg-white
             px-4
+            
           "
         >
           <img
