@@ -31,7 +31,7 @@ export default {
                 }
                 })
                 console.log(result);
-                    this.$router.push('/dashboard')
+                    this.$router.push('admin')
             }catch({error}){
                console.log(error);
             }

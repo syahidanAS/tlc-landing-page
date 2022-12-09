@@ -104,6 +104,12 @@ export default {
     this.getArticles()
 },
   methods:{
+    // async pushVisitor(){
+    //   const payload = await this.$axios.$post('blog-visitors',{
+    //     title: this.title,
+    //     slug: this. slug
+    //   })
+    // },
     async getArticles() {
       this.isLoading = true
       try{
@@ -116,6 +122,11 @@ export default {
         this.published_at = payload.data[0].published_at,
         this.category = payload.data[0].category,
         this.isLoading = false
+        
+        this.$axios.$post('blog-visitors',{
+        title: payload.data[0].title,
+        slug: payload.data[0].slug
+      })
       }catch(error){
         this.isLoading = true
         alert('Maaf gagal memuat artikel')

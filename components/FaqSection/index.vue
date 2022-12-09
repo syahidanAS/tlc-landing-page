@@ -27,19 +27,28 @@
           md:pt-8
         "
       >
+      <!-- Skeleton Faqs -->
+      <div class="flex flex-col gap-4" v-if="isLoading">
+        <div class="animate-pulse bg-gray-300 h-8 mx-4 rounded-md" v-for="skel in faqSkeletons" :key="skel.index" >
+        
+      </div>
+      </div>
+
+      <!-- Main Faqs -->
         <div
-          class="flex flex-col cursor-pointer"
-          v-on:click="isHidden1 = !isHidden1"
+          class="flex flex-col cursor-pointer "
+          v-for="item in faqs.slice(0,4)" :key="item.index" v-on:click="(item.is_open = !item.is_open)"
+          v-else
         >
-          <div class="flex flex-row justify-between px-3">
+          <div class="flex flex-row justify-between px-3 ">
             <h1 class="text-md font-semibold text-slate-800">
-              Berapa biaya registrasi di The Bright?
+              {{ item.question }}
             </h1>
             <img
               class="w-4 h-4 opacity-9"
               src="~/assets/images/arrow-up-slate-24.png"
               alt=""
-              v-if="!isHidden1"
+              v-if="item.is_open"
             />
             <img
               class="w-4 h-4 opacity-9"
@@ -48,101 +57,15 @@
               v-else
             />
           </div>
-          <div class="px-3" v-if="!isHidden1">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              porro obcaecati consequatur explicabo tempore sed hic! Odio ad
-              distinctio perspiciatis?
+          
+          <div class="px-3 mt-6 divide-y" v-if="item.is_open" >
+            
+            <p class="text-md text-slate-600">
+              {{ item.answer }}
             </p>
           </div>
         </div>
-        <div
-          class="flex flex-col cursor-pointer"
-          v-on:click="isHidden2 = !isHidden2"
-        >
-          <div class="flex flex-row justify-between px-3">
-            <h1 class="text-md font-semibold text-slate-800">
-              Apakah biaya registrasi berlaku seumur hidup?
-            </h1>
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-up-slate-24.png"
-              alt=""
-              v-if="!isHidden2"
-            />
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-down-slate-24.png"
-              alt=""
-              v-else
-            />
-          </div>
-          <div class="px-3" v-if="!isHidden2">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              porro obcaecati consequatur explicabo tempore sed hic! Odio ad
-              distinctio perspiciatis?
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex flex-col cursor-pointer"
-          v-on:click="isHidden3 = !isHidden3"
-        >
-          <div class="flex flex-row justify-between px-3">
-            <h1 class="text-md font-semibold text-slate-800">
-              Lorem ipsum dolor sit amet?
-            </h1>
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-up-slate-24.png"
-              alt=""
-              v-if="!isHidden3"
-            />
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-down-slate-24.png"
-              alt=""
-              v-else
-            />
-          </div>
-          <div class="px-3" v-if="!isHidden3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              porro obcaecati consequatur explicabo tempore sed hic! Odio ad
-              distinctio perspiciatis?
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex flex-col cursor-pointer"
-          v-on:click="isHidden4 = !isHidden4"
-        >
-          <div class="flex flex-row justify-between px-3">
-            <h1 class="text-md font-semibold text-slate-800">
-              Lorem ipsum dolor sit amet?
-            </h1>
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-up-slate-24.png"
-              alt=""
-              v-if="!isHidden4"
-            />
-            <img
-              class="w-4 h-4 opacity-9"
-              src="~/assets/images/arrow-down-slate-24.png"
-              alt=""
-              v-else
-            />
-          </div>
-          <div class="px-3" v-if="!isHidden4">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              porro obcaecati consequatur explicabo tempore sed hic! Odio ad
-              distinctio perspiciatis?
-            </p>
-          </div>
-        </div>
+
         <div class="flex flex-col cursor-pointer">
           <div class="flex flex-row justify-end px-3">
             <NuxtLink
@@ -173,11 +96,48 @@
 export default {
   data() {
     return {
-      isHidden1: true,
-      isHidden2: true,
-      isHidden3: true,
-      isHidden4: true,
+      isLoading: false,
+      notFound: false,
+      faqs:[],
+      isOpen: true,
+      faqSkeletons:{
+        item1:{},
+        item2:{},
+        item3:{},
+        item4:{},
+      }
     };
+  },
+  methods:{
+    toggle(){
+      if(this.accordionClasses == 'hidden'){
+        this.accordionClasses = ''
+      }else{
+        this.accordionClasses = 'hidden'
+      }
+    },
+    async getFaqs(){
+      this.isLoading = true
+      try{
+        this.notFound = false
+        const payload = await this.$axios.$get('faqs')
+        if(payload.data.length > 0){
+          this.notFound = false
+          this.faqs = payload.data
+          this.isLoading = false
+        }else{
+          this.isLoading = false
+          this.notFound = true
+
+        }
+      }catch(error){
+        this.isLoading = true
+        this.notFound = true
+      }
+    },
+  },
+  mounted(){
+    this.getFaqs();
   },
 };
 </script>

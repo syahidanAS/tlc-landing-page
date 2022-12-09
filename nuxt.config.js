@@ -51,8 +51,7 @@ export default {
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://api.cms.thebrightcourse.com/api/',
+    baseURL: process.env.API_URL,
   },
 
   auth: {
@@ -69,18 +68,24 @@ export default {
           autoFetch: true
         },
         endpoints: {
-          login: { url: '/auth/login', method: 'post', propertyName: 'data.token' },
-          user: { url: '/me', method: 'get', propertyName: 'data' },
+          login: { url: 'auth/login', method: 'post', propertyName: 'data.token' },
+          user: { url: 'me', method: 'get', propertyName: 'data' },
           logout: false
         }
       }
+    },
+    redirect:{
+      // login : '/dashboard',
+      logout: '/login',
+      // callback: '/login',
+      home: '/admin'
     }
   },
 
-  
-  router: {
-    middleware: ['auth']
-  },
+
+  // router: {
+  //   middleware: ['auth']
+  // },
 
 
 

@@ -1,8 +1,9 @@
-export const getter = {
-  isAuthenticated(state){
+export const getters = {
+  isAuthenticated(state) {
     return state.auth.loggedIn
   },
-  loggedInUser(state){
+
+  loggedInUser(state) {
     return state.auth.user
   }
 }

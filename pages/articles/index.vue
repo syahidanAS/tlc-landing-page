@@ -1,5 +1,5 @@
 <template >
-  <div class="flex flex-col bg-white container mx-auto px-5 md:px-24 py-10 pb-40">
+  <div class="flex flex-col bg-white container mx-auto px-5 md:px-24 2xl:px-48 py-10 pb-40">
     <h1 class="text-2xl font-bold text-slate-700">
       Artikel dan Berita The Bright Learning Center
     </h1>

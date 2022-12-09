@@ -17,6 +17,14 @@
 export default {
   auth: false,
   name: "IndexPage",
+  methods:{
+    async pushVisitor(){
+      const payload = await this.$axios.$post('web-visitors')
+    },
+  },
+  mounted(){
+    this.pushVisitor();
+  }
 };
 </script>
 

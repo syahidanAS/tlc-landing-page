@@ -2,8 +2,9 @@
   <div>
     <h1>This is Dashboard Page</h1>
     
-    <h2 v-if="isAuthenticated">Hallo, Selamat Datang </h2>
-    <h2 v-else>Anda harus login terlebih dahulu</h2>
+    <h2 >Hallo, Selamat Datang {{ loggedInUser.name }}</h2>
+
+    <button class="p-2 bg-sky-500 rounded-md " @click="logout()">Kaluar anjir</button>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  middleware: 'auth',
   layout:'adminDefault',
   computed:{
     ...mapGetters([ 'isAuthenticated', 'loggedInUser' ])

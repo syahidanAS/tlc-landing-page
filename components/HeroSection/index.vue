@@ -13,7 +13,7 @@
         md:px-0
         lg:px-20
         xl:px-20
-        2xl:px-20
+        2xl:px-48
         mx-auto
         space-y-14
         md:space-y-10
