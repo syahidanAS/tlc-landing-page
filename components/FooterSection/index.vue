@@ -1,7 +1,7 @@
 <template>
 	
-<footer class="p-4 sm:p-6 bg-slate-900 md:px-32 2xl:px-64 ">
-    <div class="md:flex md:justify-between">
+<footer class=" p-4 sm:p-6 bg-slate-900 md:px-32 2xl:px-64 ">
+    <div class=" md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
                 <img src="~/assets/images/logo-white.png" class="mr-3 h-8" alt="The Bright Logo" />

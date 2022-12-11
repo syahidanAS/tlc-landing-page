@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="mt-0 py-28 px-5 md:px-12 md:py-10 md:mt-20 bg-white">
+  <section id="about" class="mt-0 py-28 px-5 md:px-12 2xl:px-5 md:py-10 md:mt-20 bg-white">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-center text-slate-600">
         Tentang Kami
@@ -14,7 +14,7 @@
       </p>
 
       <ul
-        class="mb-8 space-y-4 text-left text-slate-700 font-semibold pt-4 md:mx-auto md:px-24">
+        class="mb-8 space-y-4 text-left text-slate-700 font-semibold pt-4 md:mx-auto md:px-24 2xl:px-9">
         <li class="flex items-center space-x-3">
           <!-- Icon -->
           <svg

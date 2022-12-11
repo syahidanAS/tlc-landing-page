@@ -63,7 +63,7 @@
     </div>
     <!-- Body Section -->
     <div class="container font-normal px-5 md:px-24 leading-6 text-slate-700">
-      <p class="text-justify">{{ body }}</p>
+      <div v-html="body"></div>
       
     </div>
     </div>

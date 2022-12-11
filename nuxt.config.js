@@ -21,6 +21,8 @@ export default {
     ]
   },
 
+
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
@@ -31,7 +33,8 @@ export default {
   plugins: [
     '~/plugins/EasySlider.js',
     '~/plugins/vue-awesome-swiper',
-    {src: "~/plugins/aos", ssr: false}
+    {src: "~/plugins/aos", ssr: false},
+    { src: "~/plugins/vue2-editor", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,6 +51,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/auth-next',
+    'nuxt-sweetalert2',
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

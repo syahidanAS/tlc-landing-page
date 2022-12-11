@@ -85,14 +85,14 @@
 
 
     <div class="flex flex-row">
-      <aside class="w-64" aria-label="Sidebar" v-if="hidden">
+      <aside class="w-72" aria-label="Sidebar" v-if="hidden">
         <div
           class="overflow-y-auto py-4 px-3 bg-slate-700 shadow-md shadow-slate-300 h-screen border-slate-400"
         >
           <ul class="space-y-2">
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="/admin"
                 class="
                 flex
                   items-center
@@ -105,12 +105,12 @@
                 "
               >
                 <span class="ml-3">Dashboard</span>
-              </a>
+              </NuxtLink>
             </li>
 
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="/admin/articles"
                 class="
                 flex
                   items-center
@@ -123,7 +123,7 @@
                 "
               >
                 <span class="ml-3">Artikel</span>
-              </a>
+              </NuxtLink>
             </li>
             <li>
               <a

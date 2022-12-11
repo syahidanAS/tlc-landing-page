@@ -126,7 +126,7 @@
             >{{ article.category }}</span
           >
           <p class="my-2 text-xs font-normal text-slate-600">
-            29 November 2022
+           {{ formatDate(article.published_at) }}
           </p>
         </div>
       </div>
@@ -154,6 +154,10 @@ export default {
     
 },
   methods:{
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('id', options)
+    },
     async getCategories(){
         const payload = await this.$axios.$get('categories')
         this.categories = payload.data
