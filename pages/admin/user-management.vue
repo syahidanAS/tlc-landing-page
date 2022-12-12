@@ -3,6 +3,7 @@
       <h1 class="mx-auto mb-4 text-2xl font-bold text-slate-700">
         User Management
       </h1>
+      <h2 class="mx-auto mb-4 font-semibold text-lg text-red-700">Hati-hati dalam mengelola user!</h2>
 
   
       <div class="flex flex-col my-4 gap-4">
@@ -202,7 +203,7 @@
             </div>
         
         </div>
-        <div class="overflow-y-scroll h-72">
+        <div class="overflow-y-scroll h-80">
           <table class="text-slate-700 w-full">
             <thead
               class="
