@@ -70,10 +70,17 @@
                 </div>
 
                 <div class="fixed p-4 z-90 w-64 bg-gray-100 shadow-md shadow-slate-300 rounded-b-md " v-if="!isExpand">
+                  <NuxtLink class="flex flex-row gap-2 cursor-pointer hover:bg-slate-300 p-2 rounded-md" to="/admin/change-password">
+                  <img class="w-5" src="~/assets/images/password.svg" alt="">
+                  <h3 class="text-slate-700 font-normal">Ganti Kata Sandi</h3>
+                </NuxtLink>
+                
                 <div class="flex flex-row gap-2 cursor-pointer hover:bg-slate-300 p-2 rounded-md" @click="logout()">
                   <img class="w-5" src="~/assets/images/logout.svg" alt="">
                   <h3 class="text-slate-700 font-normal">Logout</h3>
                 </div>
+
+
               </div>
             </li>
           </ul>
@@ -143,8 +150,8 @@
               </NuxtLink>
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+              to="/admin/testimonials"
                 class="
                 flex
                   items-center
@@ -157,11 +164,11 @@
                 "
               >
                 <span class="ml-3">Testimoni</span>
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="/admin/banners"
                 class="
                   flex
                   items-center
@@ -174,7 +181,24 @@
                 "
               >
                 <span class="ml-3">Banner</span>
-              </a>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/admin/user-management"
+                class="
+                  flex
+                  items-center
+                  p-2
+                  text-base
+                  text-white
+                  rounded-lg
+                  font-normal
+                  hover:bg-slate-800
+                "
+              >
+                <span class="ml-3">Users Management</span>
+              </NuxtLink>
             </li>
           </ul>
         </div>

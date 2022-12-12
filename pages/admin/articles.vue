@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col w-screen h-screen bg-gray-100 overflow-y-scroll">
         <h1 class="mx-auto mb-4 text-2xl font-bold text-slate-700">Kelola Artikel</h1>
+        <h2 class="mx-auto mb-4 text-sm font-normal text-slate-600">Agar tampilan website terlihat lebih nyaman, artikel wajib diisi minimal 3 item</h2>
         <div class="flex flex-row mt-4">
       <input
         class="
@@ -28,7 +29,7 @@
         Batal
       </button>
     </div>
-    
+    <NuxtLink class="flex flex-row p-2 bg-sky-500 hover:bg-sky-600 rounded-md text-white w-36 text-center justify-center mt-4" to="/admin/categories">Kelola Kategori</NuxtLink>
         <div
       class="flex flex-col container mx-auto px-4 md:px-0 py-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
     >

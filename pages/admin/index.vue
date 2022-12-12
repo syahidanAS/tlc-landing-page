@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col w-screen h-screen bg-gray-100 ">
     <h1 class="mx-auto mb-4 text-2xl font-bold text-slate-700">Dashboard</h1>
+    <h2 class="mx-auto mb-4 text-lg font-normal text-slate-600">Selamat datang di aplikasi Content Management System (CMS)</h2>
     <div class="bg-slate-500 mx-auto p-5 rounded-md justify-center shadow-md shadow-slate-200">
       <div class="flex flex-row gap-4 ">
       <div class="flex flex-col p-6 bg-white rounded-md shadow-sm shadow-slate-300">

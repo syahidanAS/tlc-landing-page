@@ -74,6 +74,7 @@
             shadow-sm shadow-slate-400
             my-14
             py-8
+            h-64
             bg-white
             px-4
             

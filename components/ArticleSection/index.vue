@@ -51,7 +51,7 @@
 
 
       <!-- Article 1 -->
-      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden w-full md:w-60 mx-auto" v-for="item in articles.slice(0,3)" :key="item.index" v-else>
+      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden w-full md:w-80 mx-auto" v-for="item in articles.slice(0,3)" :key="item.index" v-else>
         <NuxtLink :to="`/articles/${item.slug}`">
           <img
             class="w-full h-44 hover:opacity-95"
