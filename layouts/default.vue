@@ -450,6 +450,7 @@
         <img class="w-full" src="~/assets/images/logo-white.png" alt="" />
       </div>
     </div>
+
   </div>
 </template>
 

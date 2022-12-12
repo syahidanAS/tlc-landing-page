@@ -126,8 +126,8 @@
               </NuxtLink>
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="/admin/faqs"
                 class="
                 flex
                   items-center
@@ -140,7 +140,7 @@
                 "
               >
                 <span class="ml-3">FAQs</span>
-              </a>
+              </NuxtLink>
             </li>
             <li>
               <a

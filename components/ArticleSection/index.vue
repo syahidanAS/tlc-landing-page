@@ -7,7 +7,6 @@
       Artikel dan Berita Terbaru
     </h2>
     <div class="flex flex-col md:flex-row px-0 pb-12 gap-4 mt-4 md:px-24 2xl:mx-52 md:pb-0">
-      
       <div class="flex-1 p-4" v-if="isLoading">
       <div class="block bg-white overflow-hidden border-2 h-full rounded-md ">
         <div class="">
@@ -52,7 +51,7 @@
 
 
       <!-- Article 1 -->
-      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden" v-for="item in articles.slice(0,3)" :key="item.index" v-else>
+      <div class="max-w-sm bg-white border-gray-200 rounded-lg shadow-md overflow-hidden w-full md:w-60 mx-auto" v-for="item in articles.slice(0,3)" :key="item.index" v-else>
         <NuxtLink :to="`/articles/${item.slug}`">
           <img
             class="w-full h-44 hover:opacity-95"
