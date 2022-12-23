@@ -1,7 +1,8 @@
+require('dotenv').config()
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'tlc-web',
+    title: 'The Bright Learning Center',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,19 +13,28 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'logo-blue.png' },
+      {rel: "stylesheet", href: "https://cdn.jsdelivr.net/@ajusa/lit@1.0.0/dist/lit.css"}
     ],
+    script: [
+      { src: 'https://use.fontawesome.com/165d74492f.js' },
+    ]
   },
+
+
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
+    'aos/dist/aos.css'
   ],
-
+  vendor: ["aos"],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/v-tooltip.js',
     '~/plugins/EasySlider.js',
+    '~/plugins/vue-awesome-swiper',
+    {src: "~/plugins/aos", ssr: false},
+    { src: "~/plugins/vue2-editor", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,13 +49,49 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/auth-next',
+    'nuxt-sweetalert2',
   ],
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_URL,
   },
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'data.token',
+          // global: true,
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: 'data', // <--- Default "user"
+          autoFetch: true
+        },
+        endpoints: {
+          login: { url: 'auth/login', method: 'post', propertyName: 'data.token' },
+          user: { url: 'me', method: 'get', propertyName: 'data' },
+          logout: false
+        }
+      }
+    },
+    redirect:{
+      // login : '/dashboard',
+      logout: '/login',
+      // callback: '/login',
+      home: '/admin'
+    }
+  },
+
+
+  // router: {
+  //   middleware: ['auth']
+  // },
+
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -55,5 +101,5 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
 }
